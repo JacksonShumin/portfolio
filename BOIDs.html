@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/waterSimStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+	<canvas></canvas>
+    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+    </ul>
+    <div id="work">
+        <h1>GPU BOIDs</h1>
+        <ul>
+            <li class="job">
+                <h2>16,384 BOIDs</h2>
+                <p>In order to get more familiar with Compute Shaders in Unity, I made a BOID simulation using the many threads of a Compute Shader in Unity. 
+                    BOIDs are agents with flocking behavior and can appear like a swarm of fish or birds. My first simulation could handle 2^14 BOIDs with 
+                    decent performance: a number impossible to achieve on the CPU alone. 
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Usce0IksZy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </li>
+            
+            <li class="job">
+                <h2>BOIDs</h2>
+                <p>The BOIDs work by following a few simple rules. They avoid nearby BOIDs, move toward the center of the flock, and try to match velocities 
+                    with other nearby BOIDs. My first simulation also included a box that they would avoid and get teleported to the other side should they 
+                    cross it. I also ran this simulation in debug mode so I could have gotten better performance. 
+                </p>
+            </li>
+            <li class="job">
+                <h2>BOID Castes</h2>
+                <p>
+                    I made a special BOID that was marked so that it would behave differently and the others would treat it differently. My idea was a 
+                    “Smelly BOID” that the others would avoid much more strongly, but it would feel lonely and muscle to the swarm's center. To make it 
+                    more distinguished, I made it huge and green with the old high-poly mesh. Thanks to some optimizations I made, I was also able to have 
+                    twice as many BOIDs.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz2U1eUh8Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            
+            <li class="job">
+                <h2>Optimization</h2>
+                <p>
+                    In my second simulation, I made some changes so they would run a little quicker, short-circuiting and avoiding costly square roots 
+                    whenever possible. The mesh was reduced to a triangular pyramid, substantially reducing the number of triangles. I also got 
+                    rid of the teleporting to the other side because that was upsetting the swarm in a weird and seemingly unnatural way. 
+                </p>
+            </li>
+            
+        </ul>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+	<canvas></canvas>
+    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+    </ul>
+    <div id="work">
+        <h1>Cave Crawler</h1>
+        <ul>
+            <li class="job">
+                <h2>Overview</h2>
+                <p>In this economy based mining game you expand outwards and gather resources to upgrade yourself at the shop. 
+                    You must dig further into the earth to find more resources to collect and drag back to base. The intense 
+                    feeling of satisfaction when you upgrade yourself creates an addictive urge to keep playing. </p>
+            </li>
+            <img src="img/caveCrawler.PNG"  alt="Doots never die screenshot" id="projectImage" style="border-radius: 50px;">
+            <li class="job">
+                <h2>What I did</h2>
+                <p>I made the deployable items for the game. These items cost resources and the player starts with a limited 
+                    amount of them. I made a torch item that lights up an area around it so the player can more easily navigate 
+                    the pitch blackness around them. I also made a bomb item that explodes, destroying all the minable blocks 
+                    around it instantly. </p>
+                <img src="img/caveCrawlerItems.PNG" alt="The player next to a deployed bomb and torch">
+                <p>I created the level generation for this game. The map generation is seeded random, so reusing the same starting 
+                    seed will generate the same map. The map is broken down into chunks that generate around the player. Whenever 
+                    the player enters a new chunk, the surrounding chunks are generated around them. This allows the player to explore 
+                    endlessly without a superfluous amount of new wall tiles being created. </p>
+                <img src="img/caveCrawlerMapGeneration.PNG" alt="The map being generated around where the player explores">
+            </li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/waterSimStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+	<canvas></canvas>
+    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+    </ul>
+    
+    <div id="work"> 
+    <h1>Meta Reality Labs, RIT Eyes</h1>
+    <ul><li class="job">
+        <p>I worked with a team of researchers under a grant by Facebook Reality Labs to make a Machine Learning Algorithm for eye-tracking. 
+            I was chosen for my expertise in virtual 3D environments to make a large dataset of labeled eye images to train the algorithm. </p>
+            </li>
+            <img src="img/head_on_eye.png"  alt="Synthetic eyeball" width=100%><br>
+            <li class="job"> 
+            <p>We created a pipeline that took real-life 3D head scans and turned them into useable models with plica, eye-lashes, and fully rigged 
+            blinkers. We also placed an anatomically correct eyeball with replaceable textures for the iris and sclera. The cornea had varying sphericity 
+            and the iris had a contractable pupil. We used ray-casting for rendering so we could have the various parts of the eyeball bend light rays 
+            for the most realistic eye possible. We operated under incredibly high, scientific standards of realisticness.</p></li>
+            <img src="img/eye_syn.PNG"  alt="Synthetic eyeball" width=100%><br>
+            <li class="job">
+            <p>Using the automatically processed head models, we made another pipeline that reads GIW eye-tracking data and recreates a real-life eye video
+             in a virtual environment. This pipeline would go frame by frame and make keyframes for the rotation of the eyeball, armatures the blinkers, 
+             and the size of the pupil so they perfectly matched the real-life video. We would render out the images and make a side-by-side video of the 
+             real eye and the synthetic eye for comparison. A good portion of our job was ensuring that the entire pipeline ran without any human input or 
+             unexplained "magic numbers".</p></li>
+            <img src="img/eye_real.png"  alt="Real eyeball">
+    </ul></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.pointingBoxes{
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-items: center;
+}
+
+.pointingBoxes div {
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    width: 25%;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.pointingBoxes div p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
