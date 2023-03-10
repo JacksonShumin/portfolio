@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+	<canvas></canvas>
+    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="grpahics.html">Graphics</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+    </ul>
+    <div id="work">
+        <h1>Offline Ray Tracer</h1>
+        <ul>
+            <li class="job">
+                <h2>Overview</h2>
+                <p>I followed the <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">raytracing in a weekend</a> guide but I implemented it using the DirectX Math libraries. Most of the ray related math I followed directly from the guide however I did make a few important deviations. This guide went over how to raytrace spheres with reflectiveness (ranging from diffuse to mirror/metal), and refractiveness.</p>
+                <img src="img/raytrace4.PNG"  alt="Doots never die screenshot">
+                <p>This image has 500 rays  per pixel and 15 bounces per ray</p>
+            </li>
+            <li class="job">
+                <h2>Deviations</h2>
+                <p>The first deviation is that the texture is displayed using DirectX instead of saving it to a file. I also have the image process 5 pixels per frame so that you can watch the progress of the image, because it is very very slow to do this on the CPU. Especially for high fidelity images. 
+                </p><br>
+                <p>The second important deviation is how I generate the rays from the camera. I still use things like random locations on the pixel for anit-aliasing and a camera lens radius for depth of field. The difference is that I generate the rays uses an inverted WVP matrix taken from my old “camera” class to turn camera coordinates into rays. </p>
+            </li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

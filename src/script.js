@@ -65,7 +65,7 @@ function flexGrid(){
     let height = window.innerHeight / delta;
     let width = window.innerWidth / delta;
     ctx;
-    if (window.innerWidth < 900)
+    if (window.innerWidth < window.innerHeight)
     {
         floatyMouse.x = window.innerWidth / 2;
         floatyMouse.y = window.innerHeight / 2;

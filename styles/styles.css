@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+
 html {
     scroll-behavior: smooth;
     background-color: #dddddd;
@@ -418,4 +419,11 @@ a:active {
         padding-left: 30px;
         padding-right: 30px;
     }
+}
+
+#aboutMe {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 300px;
 }
