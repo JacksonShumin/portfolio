@@ -427,3 +427,7 @@ a:active {
     width: 50%;
     min-width: 300px;
 }
+
+html {
+    background-color:rgb(46, 46, 46);
+}

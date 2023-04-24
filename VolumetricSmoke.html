@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/waterSimStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+	<canvas></canvas>
+    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="grpahics.html">Graphics</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+    </ul>
+    <div id="work">
+        <h1>Volumetric Smoke</h1>
+        <ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yn3kdm37yt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <li class="job">
+                <h2>Overview</h2>
+                <p>
+                    I made a volumetric fluid simulation to replicate smoke in Unreal Engine 5. I used several 3D texture pairs that could be passed into a series of compute shaders that would use the Navier Stokes equations to move fluid around like smoke. For ease of use and live editing parameters, the C++ implementation is integrated into blueprints. 
+                </p>
+            </li>
+            
+            <li class="job">
+                <h2>2D Implementation</h2>
+                <p>
+                    Before I made the full volumetric version I made a 2D version. It works in largely the same way. Here is a video if that.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Siunqt7MVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </li>
+            
+            <li class="job">
+                <h2>Unreal Engine 5 CPP Implementation</h2>
+                <p>
+                    On the C++ side, I use blueprint calls to execute the compute shader and pass in parameters. The parameters that can be modified are injection radius, pressure gradient multiplier, vorticity multiplier, injection center offset, injection velocity, injection color, and the number of times to execute the pressure solver. 
+                </p>
+                <br>
+                <p>
+                    You can also pass in the “display” enumerator, which changes the output texture to be the fluid map, velocity map, pressure map, divergence, or pressure gradient. Fluid is the only output texture that will look like smoke, but having the other maps is valuable for debugging unexpected behavior. To further assist in debugging, the simulation can be paused, resumed, or played frame by frame for more meticulous analysis. 
+                </p>
+            </li>
+
+            <img src="img/VolumetricSmoke1.PNG"  alt="Volumetric Smoke screenshot">
+
+            <li class="job">
+                <h2>Resources</h2>
+                <p>
+                    The simulation uses a total of seven 3D texture volumes. The textures for velocity, pressure, and fluid all come in pairs because the compute shader needs to read and write to them at the same time. The divergence map only needs a single reference because it is never read and written to in the same compute shader. To help simplify the process of swapping these textures, I made a TextureSwapper class that can take the textures and return the “read” or “write” resource and swap them with a method. 
+                </p>
+                <br>
+                <p>
+                    I use the Render Dependency Graph (RDG) to execute several compute shaders in every frame. RDG is great because it can automatically parallelize compute shader executions and manages resource usage. RDG will also keep track of resources so it does not execute compute passes that use the same resource simultaneously. This is important because these passes must occur in a particular order to work properly. 
+                </p>
+            </li>
+            
+            <li class="job">
+                <h2>Shaders</h2>
+                <p>
+                    The execution happens in a few steps, but on a high level, it does a “one pass” shader that advects velocity and fluid, dampens them, subtracts the pressure gradient from the velocity, injects fluid, and then writes the new values to the corresponding output textures. The second step is the vorticity step, where vorticity is added to velocity in a separate pass because it needs to use the updated velocities of adjacent cells. It takes the velocity, adds the vorticity, and writes it to the output velocity texture. The last remaining passes are the pressure solver passes. These read pressure and divergence to write a new pressure, which gets closer to the actual pressure with more iterations. 
+                </p>
+            </li>
+
+        </ul>
+    </div>
+
+    
+</body>
+</html>
