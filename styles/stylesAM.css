@@ -38,20 +38,6 @@
   --space-xl: 2.25rem;
 }
 
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#f7f8fb;
-    --panel:#ffffff;
-    --panel-2:#eef1f7;
-    --text:#0f1220;
-    --muted:#4a5263;
-    --link:#006dca;
-    --link-hover:#0087ff;
-    --shadow-1: 0 8px 24px rgba(10,18,32,.08);
-    --shadow-2: 0 12px 32px rgba(10,18,32,.12);
-  }
-}
-
 /* ------------------------------
    Base / Reset
    ------------------------------ */
