@@ -3,36 +3,37 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Jackson Shuminski Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
 	<script src="src/script.js"></script>
 </head>
 <body>
-	<canvas></canvas>
-    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
     <ul id="topbar">
         <li><a href="work.html">Work Experience</a></li>
         <li><a href="index.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
     </ul>
     <div id="work">
         <h1>Realtime Ray Tracer</h1>
         <ul>
             <li class="job">
-                <img src="img/RealtimeTrace2.png"  alt="Raytracer screen shot">
                 <h2>Overview</h2>
                 <p>I used DirectX12 to create a Ray Tracing pipeline that could read OBJ files and generate a BLAS for each unique mesh and update a TLAS every frame to pass into the DirectXR Raytracing Pipeline to generate an image. I wrote a Ray Generation, Closest Hit, and Miss shader to be used in HLSL for generating an image. It reuses many of the features from my other DirectX11 projects, like an Entity system and a controllable camera. </p>
             </li>
+            
+            <div class="job" id="images2">
+                <img src="img/RealtimeTrace2.png"  alt="Raytracer screen shot">
+                <img src="img/RealtimeTrace1.png"  alt="Raytracer screen shot">
+            </div>
+
             <li class="job">
                 <h2>Raytracing Shader</h2>
                 <p>The Generation shader creates 30 rays per pixel, and each one can bounce 15 times before returning black. They are randomly scattered on the pixel and launched to avoid any aliasing and provide Raytraced diffuse lighting by averaging out random bounces. </p><br>
                 <p>The miss shader just returns a fixed sky color, which is a gradient lerped from a light blue color to a white color depending on the Y value of the rays direction; where straight up is white and straight down is light blue. </p><br>
-                <img src="img/RealtimeTrace1.png"  alt="Raytracer screen shot">
                 <p>The Closest Hit shader uses the three vertices of the triangle hit to interpolate their position and normal using barycentric coordinates. This vertex is converted to world space and used in diffuse, reflection, and refraction. The Material is passed in as 6 floats: color, roughness, whether it is transparent, and its index of refraction. Diffusion uses a random ray on the surface of a unit sphere moved one unit in the normal direction as a direction to move towards. Reflection simply reflects along the normal. For roughness values between 0 and 1, I calculate a diffuse ray and a reflected ray and use the roughness to slerp the normal from reflection to diffuse. When refraction is true, it uses the index of refraction to refract the ray’s normal, using the reciprocal when the ray hits a back face. </p>
-                
             </li>
+                
         </ul>
     </div>
 

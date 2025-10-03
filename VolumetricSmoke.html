@@ -3,38 +3,32 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Jackson Shuminski Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
     <link rel="stylesheet" href="styles/waterSimStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
 </head>
 <body>
-	<canvas></canvas>
-    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
     <ul id="topbar">
         <li><a href="work.html">Work Experience</a></li>
         <li><a href="index.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
     </ul>
     <div id="work">
         <h1>Volumetric Smoke</h1>
         <ul>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yn3kdm37yt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <li class="job">
                 <h2>Overview</h2>
                 <p>
                     I made a volumetric fluid simulation to replicate smoke in Unreal Engine 5. I used several 3D texture pairs that could be passed into a series of compute shaders that would use the Navier Stokes equations to move fluid around like smoke. For ease of use and live editing parameters, the C++ implementation is integrated into blueprints. 
                 </p>
+
             </li>
-            
-            <li class="job">
-                <h2>2D Implementation</h2>
-                <p>
-                    Before I made the full volumetric version I made a 2D version. It works in largely the same way. Here is a video if that.
-                </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Siunqt7MVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <li class="job" id="images">
+                <img src="img/VolumetricSmoke1.PNG"  alt="Volumetric Smoke screenshot">
+                
+                <img src="img/purplesmoke.png"  alt="Volumetric Smoke screenshot">
             </li>
             
             <li class="job">
@@ -48,7 +42,8 @@
                 </p>
             </li>
 
-            <img src="img/VolumetricSmoke1.PNG"  alt="Volumetric Smoke screenshot">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FNNVATyyjwE?si=QNilNsdYlU5uC-Fz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
 
             <li class="job">
                 <h2>Resources</h2>

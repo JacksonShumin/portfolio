@@ -1,0 +1,288 @@
+/* =========================================================
+   Jackson Shuminski Portfolio — styles2.css
+   - Smaller project images
+   - Projects in two-column grid (auto rows)
+   - Polished, responsive, professional theme
+   - Improved background (animated ambient glow)
+   - Better "What I Did" action chips
+   - Tighter top spacing
+   ========================================================= */
+
+/* ------------------------------
+   Design Tokens
+   ------------------------------ */
+:root{
+  --bg: #0f1115;
+  --panel: #151923;
+  --panel-2: #1b2130;
+  --text: #e8ebf1;
+  --muted: #a9b1c3;
+  --link: #7cc7ff;
+  --link-hover: #9bd6ff;
+  --accent: #7c4dff;
+  --accent-2: #2ee6a6;
+
+  --radius: .9rem;
+  --radius-lg: 1.2rem;
+  --shadow-1: 0 8px 24px rgba(0,0,0,.22);
+  --shadow-2: 0 12px 32px rgba(0,0,0,.28);
+
+  --fs-1: clamp(2rem, 3.5vw + .5rem, 3rem);
+  --fs-2: clamp(1.25rem, 1.2vw + .75rem, 1.65rem);
+  --fs-3: 1.075rem;
+  --fs-4: 1rem;
+
+  --space-xs: .4rem;
+  --space-sm: .7rem;
+  --space: 1rem;
+  --space-md: 1.35rem;
+  --space-lg: 1.6rem;
+  --space-xl: 2rem;
+}
+
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f8fb;
+    --panel:#ffffff;
+    --panel-2:#eef1f7;
+    --text:#0f1220;
+    --muted:#4a5263;
+    --link:#006dca;
+    --link-hover:#0087ff;
+    --shadow-1: 0 8px 24px rgba(10,18,32,.08);
+    --shadow-2: 0 12px 32px rgba(10,18,32,.12);
+  }
+}
+
+/* ------------------------------
+   Base / Reset
+   ------------------------------ */
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+html, body{ height: 100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-size: var(--fs-4);
+  line-height: 1.6;
+  background: radial-gradient(1200px 800px at 10% -10%, #1b1f2b 0%, transparent 60%),
+              radial-gradient(1200px 800px at 110% 10%, #162234 0%, transparent 60%),
+              var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Ambient animated background glow */
+body::before{
+  content:"";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 28% at 15% 20%, rgba(124,77,255,.35), transparent 60%),
+    radial-gradient(35% 25% at 85% 10%, rgba(46,230,166,.30), transparent 60%),
+    radial-gradient(25% 20% at 60% 85%, rgba(124,210,255,.22), transparent 70%);
+  filter: blur(60px) saturate(120%);
+  opacity: .35;
+  animation: floatGlow 28s ease-in-out infinite alternate;
+}
+@keyframes floatGlow{
+  0%   { transform: translate3d(-2%, -1%, 0) scale(1);   }
+  50%  { transform: translate3d(2%, 1%, 0)  scale(1.05); }
+  100% { transform: translate3d(-1%, 2%, 0) scale(1.02); }
+}
+
+a{ color: var(--link); text-underline-offset: 2px; text-decoration-thickness: 1.5px; }
+a:hover{ color: var(--link-hover); }
+:focus-visible{ outline: 3px solid var(--accent-2); outline-offset: 2px; border-radius: .5rem; }
+img{ max-width: 100%; display: block; border-radius: .7rem; }
+
+/* ------------------------------
+   Header / Hero
+   ------------------------------ */
+h1#top{
+  font-size: var(--fs-1);
+  text-align: center;
+  margin: var(--space-lg) auto var(--space); /* smaller top gap */
+  font-weight: 800;
+  letter-spacing: .3px;
+  line-height: 1.15;
+  background: linear-gradient(90deg, var(--text) 0%, #cfe7ff 60%, var(--text) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ------------------------------
+   Top Navigation (#topbar)
+   ------------------------------ */
+#topbar{
+  list-style: none;
+  display: flex;
+  gap: .25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: .5rem;
+  margin: 0 auto var(--space-xl);
+  position: sticky;
+  top: .5rem;
+  z-index: 50;
+  width: min(980px, 94vw);
+  background: color-mix(in oklab, var(--panel), black 8%);
+  backdrop-filter: blur(10px);
+  border: 1px solid color-mix(in oklab, var(--panel-2), black 25%);
+  border-radius: 999px;
+  box-shadow: var(--shadow-1);
+}
+#topbar li{ display: contents; }
+#topbar a{
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  border: 1px solid transparent;
+}
+#topbar a:hover{
+  background: color-mix(in oklab, var(--panel-2), white 4%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+
+/* ------------------------------
+   Projects Section
+   ------------------------------ */
+#projects{ padding: 0 0 var(--space-xl); }
+#projects > h1{
+  font-size: var(--fs-2);
+  text-align: center;
+  margin: var(--space-lg) 0 var(--space);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+/* Two-column grid for the list (auto rows) */
+#projects > ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  padding: 0 var(--space);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ------------------------------
+   Project Card (vertical layout)
+   ------------------------------ */
+.project{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--panel), black 3%), color-mix(in oklab, var(--panel), black 10%));
+  border: 1px solid color-mix(in oklab, var(--panel-2), black 30%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  position: relative;
+  isolation: isolate;
+}
+.project:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+  border-color: color-mix(in oklab, var(--accent), var(--panel-2) 70%);
+}
+
+/* Smaller, consistent image size */
+.project > img{
+  width: 100%;
+  height: 210px;              /* tighter, uniform thumbnail height */
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* Content */
+.project .intro{
+  padding: var(--space-lg) var(--space-lg) var(--space);
+}
+.project .intro .title{
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: .25rem;
+}
+.project .intro .credit{
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: .5rem;
+}
+.project .desc{
+  color: color-mix(in oklab, var(--text), black 25%);
+  line-height: 1.65;
+  margin-top: .25rem;
+}
+
+/* ------------------------------
+   "What I Did" actions
+   ------------------------------ */
+.WhatIDid{
+  padding: 0 var(--space-lg) var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
+  align-items: center;
+}
+.WhatIDid h2{ font-size: 1rem; margin: 0; }
+.WhatIDid h2 a,
+.WhatIDid a{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+  padding: .55rem .9rem;
+  border-radius: .7rem;
+  border: 1px solid color-mix(in oklab, var(--panel-2), black 25%);
+  background: color-mix(in oklab, var(--panel), black 4%);
+  transition: background .2s ease, transform .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+}
+/* add subtle arrow for secondary actions */
+.WhatIDid a:not(:has(h2))::after{
+  content: "↗";
+  font-weight: 700;
+  opacity: .8;
+  transform: translateY(-1px);
+}
+.WhatIDid h2 a:hover,
+.WhatIDid a:hover{
+  background: color-mix(in oklab, var(--panel-2), white 6%);
+  color: var(--link-hover);
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--panel-2), var(--accent) 40%);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+
+/* ------------------------------
+   Responsive
+   ------------------------------ */
+@media (max-width: 900px){
+  #projects > ul{
+    grid-template-columns: 1fr; /* single column on small screens */
+    gap: var(--space-md);
+    padding: 0 var(--space);
+  }
+  .project > img{ height: 200px; }
+}
+
+@media (max-width: 480px){
+  :root{ --fs-3: 1.02rem; --fs-4: .975rem; }
+  .WhatIDid a{ width: 100%; justify-content: center; }
+}

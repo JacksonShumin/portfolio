@@ -1,0 +1,140 @@
+
+/* Jackson Shuminski Portfolio — styles3.css
+   - More visually interesting background
+   - Reduced top spacing
+*/
+
+:root{
+  --bg1: #0f1115;
+  --bg2: #1b1f2b;
+  --bg3: #1a2238;
+  --text: #e8ebf1;
+  --muted: #a9b1c3;
+  --link: #7cc7ff;
+  --link-hover: #9bd6ff;
+  --accent: #7c4dff;
+  --accent-2: #2ee6a6;
+  --panel: rgba(255,255,255,0.05);
+  --panel-border: rgba(255,255,255,0.08);
+
+  --radius: .9rem;
+  --shadow-1: 0 8px 24px rgba(0,0,0,.25);
+  --shadow-2: 0 12px 32px rgba(0,0,0,.35);
+
+  --fs-1: clamp(2rem, 3vw + .5rem, 2.6rem);
+  --fs-2: clamp(1.25rem, 1vw + .75rem, 1.6rem);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  color:var(--text);
+  background:
+    radial-gradient(800px 600px at 10% 10%, #222a44 0%, transparent 70%),
+    radial-gradient(900px 700px at 90% 0%, #1c2d4d 0%, transparent 70%),
+    linear-gradient(135deg, var(--bg1), var(--bg2) 40%, var(--bg3) 100%);
+  background-attachment: fixed;
+  line-height:1.6;
+}
+a{ color:var(--link);text-underline-offset:2px;text-decoration-thickness:1.5px; }
+a:hover{ color:var(--link-hover); }
+
+h1#top{
+  font-size:var(--fs-1);
+  text-align:center;
+  margin:1.5rem auto 0.8rem; /* reduced top gap */
+  font-weight:800;
+  letter-spacing:.3px;
+  background:linear-gradient(90deg,var(--text) 0%,#cfe7ff 60%,var(--text) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+#topbar{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:.3rem;
+  padding:.4rem .6rem;
+  margin:0 auto 1.2rem;
+  position:sticky;top:.3rem;
+  background:var(--panel);
+  border:1px solid var(--panel-border);
+  border-radius:999px;
+  backdrop-filter:blur(8px);
+  box-shadow:var(--shadow-1);
+}
+#topbar li{display:contents;}
+#topbar a{
+  padding:.55rem .9rem;
+  border-radius:999px;
+  font-weight:600;
+  color:var(--text);
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+}
+#topbar a:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px);}
+
+#projects{
+  padding:0 0 3rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+#projects>h1{
+  text-align:center;
+  font-size:var(--fs-2);
+  margin:1rem 0 1.5rem;
+  font-weight:700;
+}
+#projects>ul{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.5rem;
+  padding:0 1rem;
+}
+
+.project{
+  display:flex;
+  flex-direction:column;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--panel-border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-1);
+  transition:transform .25s,box-shadow .25s;
+}
+.project:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);}
+.project>img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.project .intro{padding:1rem 1rem .5rem;}
+.project .intro .title{font-size:1.2rem;font-weight:700;margin-bottom:.25rem;}
+.project .intro .credit{color:var(--muted);font-size:.9rem;margin-bottom:.5rem;}
+.project .desc{color:rgba(255,255,255,0.8);font-size:.95rem;}
+
+.WhatIDid{
+  padding:0 1rem 1rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+}
+.WhatIDid a{
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--panel-border);
+  border-radius:.6rem;
+  padding:.4rem .7rem;
+  color:var(--text);
+  font-weight:600;
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+}
+.WhatIDid a:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px);}
+
+@media(max-width:900px){
+  #projects>ul{grid-template-columns:1fr;}
+  .project>img{height:180px;}
+}

@@ -3,34 +3,38 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Jackson Shuminski Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
     <link rel="stylesheet" href="styles/waterSimStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
 	<script src="src/script.js"></script>
 </head>
 <body>
-	<canvas></canvas>
-    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
     <ul id="topbar">
         <li><a href="work.html">Work Experience</a></li>
         <li><a href="index.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
     </ul>
     <div id="work">
         <h1>The Pact</h1>
         <ul>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KfmWKMUA-Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="WhatIDid" justify-content="center" display="flex">
+                <a href = "https://themasonjars.itch.io/the-pact" id="itch">Check it out now at the Itch IO page</a>
+            </div>
             <li class="job">
                 <h2>Overview</h2>
                 <p>I have worked on this game as a gameplay programmer since August 2022. My team included Aditya Patil, Joel Shaji, Kesavan Shanmugasundaram, and David Liu. We made a third-person, rouge-like shooter with a focus on ability-based combat.  </p>
-                <img src="img/thePact.PNG">
             </li>
+            
+            <img src="img/thePact.PNG">
+            
+  
+
             <li class="job">
                 <h2>Gameplay Programmer</h2>
                 <p>I worked on much of the foundational mechanics of our game. I created or implemented the player controller, the projectiles, every ability, all player animations, the lodestone combat, and many other small tasks. My technical implementations were carefully premeditated so that both the player and the enemies could use every single ability without any extra logic. </p>
             </li>
+            
             <li class="job">
                 <h2>Abilities</h2>
                 <p>There are six abilities total: three for light attack and three for heavy attack. Each can be combined to create powerful synergies and a unique combat style. Both the player and enemies have a unique visual style of VFX for every single combination of abilities. This sums to a total of 32 potential unique VFX styles for projectiles. 
@@ -38,19 +42,26 @@
                 <p>I implemented these projectiles with special abilities using an inheritance system. At the top of the system is the “Logic Layer,” which has 3 Blueprints that contain all the logic for every upgrade. Bellow the logic layer is the “Visual Layer,” which, by contrast, has no logic whatsoever. Instead, it overrides the VFX manager to provide easily customizable projectile styles. 
                 </p>
             </li>
+            
             <li class="job">
                 <h2>Projectiles</h2>
                 <p>The logic layer has a topmost “Base Projectile” blueprint, which has logic shared by all projectiles. This includes firing, hitting and damaging opponents, homing, and keeping track of nearby enemies. This blueprint also calls dummy methods that can be overridden in its children. These include functions that are triggered for hitting an opponent, hitting the environment, and initializing after being launched. These functions act as important triggers for the child classes. This also holds an “Ability Struct” that stores all the information about the projectile, and its upgrades. 
                 </p><br>
+            </li>
+
+            <li class="job">
                 <h2>Light Upgrades</h2>
                 <p>The “Light Projectile” is a child of the Base Projectile in the logic layer. It uses the Hit Character function to check if it is a player shot and heal the player. This blueprint implements all three light attack upgrades: rebound, vulnerable debuff, and special behaviors for burst fire. 
-                </p><br>
+                </p>
                 <p>Rebound is the most complex upgrade, it simply uses the enemy tracker built into the base projectile BP to evaluate which other enemy character it has a direct line of sight to. It uses this list of viable targets to launch another projectile with one less rebound at a random viable enemy. 
                 </p><br>
                 <p>Vulnerable debuff applies a stack of vulnerable to the character it hits. This is done in the “Character” blueprint that both player and enemies share. 
                 </p><br>
                 <p>The burst uses a special creation function outside the projectile blueprints to implement the burst fire mode. The projectile only uses a special event on creation to boost the homing substantially for the first two seconds, so the shots curve towards where the player or enemy fired. 
                 </p><br>
+            </li>
+
+            <li class="job">
                 <h2>Heavy Upgrades</h2>
                 <p>The “Heavy Projectile” is a child of the Base Projectile in the logic layer. It implements the three heavy attack upgrades in our game: explosive, frost, and airstrike. 
                 </p><br>

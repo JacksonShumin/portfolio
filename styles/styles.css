@@ -165,11 +165,13 @@ h1 {
 }
 
 #projects ul, #websites ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0%;
+    list-style: none;
+    display: grid;                  /* Use CSS Grid instead of flex */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+    gap: 20px;                      /* Space between the two columns */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;              /* Keeps columns from stretching too wide */
 }
 
 .intro > * {
@@ -396,14 +398,6 @@ a:active {
     background-position: center;
 }
 
-
-
-@media only screen and (max-width: 670px) {
-    .project, .website {
-        width: auto;
-    }
-}
-@media only screen and (max-width: 1360px) {
     .project {
         flex-direction: column;
     }
@@ -419,6 +413,11 @@ a:active {
         padding-left: 30px;
         padding-right: 30px;
     }
+    .project, .website {
+        width: auto;
+    }
+
+@media only screen and (max-width: 670px) {
 }
 
 #aboutMe {

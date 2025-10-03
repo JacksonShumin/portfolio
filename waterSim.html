@@ -3,33 +3,30 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Jackson Shuminski Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
     <link rel="stylesheet" href="styles/waterSimStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
 	<script src="src/script.js"></script>
 </head>
 <body>
-	<canvas></canvas>
-    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
     <ul id="topbar">
         <li><a href="work.html">Work Experience</a></li>
         <li><a href="index.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
     </ul>
     <div id="work">
         <h1>DX11 Water Simulation</h1>
         <ul>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8rqRzmuZmq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <li class="job">
                 <h2>Overview</h2>
                 <p>This is a solo passion project I have been working on in DirectX11 since February of 2022. My goal was to simulate and render accurate water in 
                     an islandy setting. This was my first project using compute shaders and my first time taking on water simulation, so I naturally ran into many 
                     difficulties that I solved on my own. These bugs were often visually absurd-looking, and I had a lot of fun trying to figure them out. </p>
-                <img src="img/waterSim.PNG"  alt="Water Simulation screenshot" id="projectImage" style="border-radius: 10px;">
-            
             </li>
+            
+            <img src="img/waterSim.PNG"  alt="Water Simulation screenshot" id="projectImage" style="border-radius: 10px;">
+            
             
             <li class="job">
                 <h2>Basics</h2>
@@ -45,16 +42,16 @@
                     to calculate how far a ray of light would have to travel through the water before it reaches the camera. This distance value 
                     is used to remove red, then green, then blue. Distance is put to the power of 0.2 before being used because wavelengths are 
                     not blocked in a linear manner. </p>
-                <img src="img/waterBlueShift.PNG"  alt="Water Simulation screenshot">
             </li>
+            <img src="img/waterBlueShift.PNG"  alt="Water Simulation screenshot">
             <li class="job">
                 <h2>Water Surface</h2>
                 <p>The water surface is made up of a 256x256 grid of vertices scaled down to fit into a 32x32 meter space. My plan to make a believable water surface 
                     was to have many layered <strong>gaussian waves</strong> stacked on top of each other. These waves are unique because they have a vertical and horizontal component, 
                     so the vertices move in a circle rather than up and down. Because of this horizontal component, a few extra steps must be taken when making a 
                     height and normal map. </p>
-                <img src="img/gausianWave.PNG"  alt="Water Simulation screenshot">
             </li>
+            <img src="img/gausianWave.PNG"  alt="Water Simulation screenshot">
             <li class="job">
                 <h2>Water Surface Generation</h2>
                 <p>
@@ -102,8 +99,8 @@
                     them, and sky pixels were set to 0.99 so that water pixels could later be added on top of them when viewed from below the water. The wiggly effect would 
                     have the amplitude of its distortion scaled-down the further the pixel to a distance of 600 meters, leaving 40% of the alpha float available for padding. 
                     I added the functionality to display the image's alpha channel and view the depth map with a toggleable button. </p>
-                <img src="img/depthMap.PNG"  alt="Water Simulation screenshot">
             </li>
+            <img src="img/depthMap.PNG"  alt="Water Simulation screenshot">
             <li class="job">
                 <h2>Buoyant Entities</h2>
                 <p>Buoyant entities were a puzzling problem. My first approach was to bring the water height map into the CPU to calculate each buoyant object's normal and 
@@ -112,8 +109,8 @@
                     <br><p>I calculated the actual normal by taking sampling four points from the water height map. I used points on each individual object's local X and Z 
                         axis to calculate a “correctional rotation matrix” that would orient the local y to point away from the water. 
                     </p>
-                <img src="img/bouyantDucks.PNG"  alt="Water Simulation screenshot">
             </li>
+            <img src="img/bouyantDucks.PNG"  alt="Water Simulation screenshot">
             <h1>Bug Bashing!</h1>
             <li class="job">
                 <h2>Wave Harmonizing</h2>

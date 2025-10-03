@@ -3,18 +3,14 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Jackson Shuminski Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
 </head>
 <body>
-	<canvas></canvas>
-    <h1 id="top">Jackson Shuminski: Game Designer </h1>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
     <ul id="topbar">
         <li><a href="work.html">Work Experience</a></li>
         <li><a href="index.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
     </ul>
     <div id="work">
@@ -26,7 +22,9 @@
                     Play the web build now and fight off hordes of trick-or-treaters with a bone to pick! With time running out, you must 
                     scare children to prolong your unnatural existence in this plane of reality.</p>
             </li>
+
             <img src="img/dnd.PNG"  alt="Doots never die screenshot" id="projectImage">
+
             <li class="job">
                 <h2>What I did</h2>
                 <p>I did a lot of work with Unity image-processing shaders in this project. I made a post processing shader that  mimicked the look 
@@ -36,21 +34,34 @@
                     I create a glitchy feel is by creating what I call a “Hazy Effect” where the redness and blueness of a pixel are pulled in opposite 
                     directions in a sine wave function of time. The effect is subtle but very effective for making the scene look a bit glitchy. The 
                     final effect I use is the CRT lines, which stripe the screen black to replicate the lines on a CRT television. </p>
+            </li>
 
-                <img src="img/dndScreenEffect.PNG" alt="Deaf Deaf Deli interior">
-                <img src="img/dndScreenNoEffect.PNG" alt="Deaf Deaf Deli interior">
-
+                <div class="job" id="images2">
+                    <img src="img/dndScreenEffect.PNG" alt="Deaf Deaf Deli interior">
+                    <img src="img/dndScreenNoEffect.PNG" alt="Deaf Deaf Deli interior">
+                </div>
+                
+                
+            <li class="job">
                 <p>Another image processing shader is being used on the house sprites for key-coloring. The texture for the houses uses red for the 
                     window frames, blue for the walls, and green for the roof. An image processing shader is set with a random house color theme at 
                     the start of the game for each house. Depending on the theme selected, the house will change color. </p>
-                <img src="img/houseColorKeys.PNG" alt="Houses with various color themes">
+                    <img src="img/houseColorKeys.PNG" alt="Houses with various color themes">
+            </li>
+            
+
+            <li class="job">
                 <p>I created the combat system for this game as well. The skeleton wiggles around as they move so that I wouldn't have to make a walk 
                     animation. I made the shooting, targeting, and yelling area of effect. The yelling uses the post processing shader to create a “shock 
                     wave” around the player that expands away and dissipates as it gets further away. </p>
-                <img src="img/skeletonScream.PNG" alt="Skeleton scream effect">
-                <p>I also made most of the pixel art used in the main game. The only pixel art that I didn't make was two of the children and the trumpet. </p>
-                <p></p>
+                    <img src="img/skeletonScream.PNG" alt="Skeleton scream effect">
             </li>
+
+            <li class="job">
+                <p>I also made most of the pixel art used in the main game. The only pixel art that I didn't make was two of the children and the trumpet. </p>
+            </li>
+
+
         </ul>
     </div>
 
