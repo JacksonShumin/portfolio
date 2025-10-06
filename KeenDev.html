@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jackson Shuminski Portfolio</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="styles/styles2.css">
+    <link rel="stylesheet" href="styles/waterSimStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<script src="src/script.js"></script>
+</head>
+<body>
+    <h1 id="top">Jackson Shuminski: Game Developer </h1>
+    <ul id="topbar">
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html">About Me</a></li>
+    </ul>
+    
+    <div id="work"> 
+    <h1>Water Physics Developer</h1>
+    <ul>
+        <li class="job">
+            <p>
+                I worked on the VRage game engine used in Space Engineers 2 on the Water Team, developing an experimental water simulation. I used my strong math and physics background to develop a unique non-compressible volumetric fluid simulation. I also spoke for my team in company-wide meetings, breaking down complex concepts into entertaining deliverables I would deliver in front of dozens of people. 
+            </p>
+        </li>
+        
+            <div class="job" id="images2">
+                <img src="img/waterdebug.png"  alt="DDA path">
+                <img src="img/baseInterior.png"  alt="DDA path" width=100%>
+            </div><br>
+        
+        <li class="job">
+            <h2>Planetary Water and Oceans</h2>
+            <p>
+                One of the “biggest” features I designed and developed during my time at Keen was bringing oceans to planets. This feature would create a massive non-simulated water surface in the shape of a section of a sphere. The algorithm begins by scanning the planet directly, assessing where to place “ocean tiles” by checking the terrain and the desired water level (based on the biome). 
+            </p>
+            <img src="img/planetarywater.png"  alt="DDA path" width=100%>
+            <p>
+                What makes these ocean tiles so powerful is that they could easily convert into fully simulated water seamlessly when interacted with. Between surface waves and the water being converted on digging into the terrain or building structures, the illusion would be maintained that the whole ocean is simulated. 
+            </p>
+        </li>
+            
+
+
+        <li class="job">
+            <h2>Constant Water</h2>
+            <p>
+                One of the first major changes I made to the existing water algorithm was to make a new type of flag that could be added to water cells to mark them as “Constant”. These sections of water marked as constant would no longer change, altering their behavior to act as an infinite sink or source. 
+            </p>
+            <p>
+                This feature would go on to fuel a lot of features, like river heads, by acting as an infinite “spring”. The use of constant water in the oceans was much more stable, allowing the shoreline to remove the excess water that flowed into it and eventually return to a base water level. 
+            </p>
+
+            <p>In this screenshot the Waterfall is formed from a constant spring at the top of the hill. </p>
+
+            <img src="img/waterfall.png"  alt="DDA path" width=100%>
+        </li>
+
+        <li class="job">
+            <h2>DDA Raymarcher</h2>
+            <p>
+                In my first year at Keen, one of my first major graphics programming tasks was to completely remake our water-rendering raymarcher. This was a really exciting task where I converted our messy fixed-step raymarcher (which would often miss the water surface entirely!) to a new DDA raymarcher, both more accurate and more efficient.  
+            </p>
+
+            <p>Below shows a before and after with the old raymarcher missing the surface. </p>
+
+            <div class="job" id="images2">
+                <img src="img/waterwithholes.png"  alt="DDA path" width=100%>
+                <img src="img/waternoholes.png"  alt="DDA path" width=100%>
+            </div><br>
+        </li>
+
+        <li class="job">
+            <h2>An Algorithm that Never Misses</h2>
+
+            <p>
+                DDA stands for Digital Differential Analyzer, and it is a great way to raymarch a 3D texture. DDA will take a start point and a direction and give the exact distances that the ray will pass from one “block” into another, as well as provide the direction the ray had to step in. Because it checks every point where new watercells are being evaluated, it is impossible to ever miss the water surface. With fixed step size the water surface can be missed entirely. 
+            </p>
+
+            <p>
+                I was also able to optimize the query system so that already queried water cells would be cached during the march. So each query would only check 4 cells instead of all 8, saving a little time. 
+            </p>
+            
+            <div class="job" id="images2">
+                <img src="img/ddaRay.png"  alt="DDA path" width=100%>
+                <img src="img/fixedmarcher.png"  alt="Fixed distance marcher" width=100%>
+            </div>
+        </li>
+        
+        <li class="job">
+
+            <h2>Refinement Optimization</h2>
+            <p>
+                The refinement step is where an exact hit location is determined from a hit. This means that in the previous step, the “density” of the water is below some iso-value, and in the current step, it is above that iso-value. The goal of the refinement is to find the exact distance where it crosses that isovalue. 
+            </p>
+            <p>
+                Previously, we did a simple binary search, bisecting the line segment several times right down the middle. This necessitated using a high number of bisections before the location was precise enough to form a smooth surface. I replaced this with a weighted bisection algorithm that used the density at both points to cut the line segment where it predicts the isovalue will be. The result was able to render a smooth surface in just 5 steps instead of 32 steps, saving lots of time. 
+            </p>
+        </li>
+                
+
+    </ul></div>
+
+</body>
+</html>
