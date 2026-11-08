@@ -1,56 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cave Crawler | Jackson Shuminski</title>
+<meta name="description" content="A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Cave Crawler | Jackson Shuminski">
+<meta property="og:description" content="A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    <div id="work">
-        <h1>Cave Crawler</h1>
-        <ul>
-            <li class="job">
-                <h2>Overview</h2>
-                <p>In this economy based mining game you expand outwards and gather resources to upgrade yourself at the shop. 
-                    You must dig further into the earth to find more resources to collect and drag back to base. The intense 
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="case-study">
+<a class="back-link" href="projects.html">← Back to projects</a>
+<h1>Cave Crawler</h1>
+<div class="case-summary">
+<div class="eyebrow">Unity · Team project</div>
+<p>A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.</p>
+</div>
+<ul>
+<li class="job">
+<h2>Overview</h2>
+<p>In this economy based mining game you expand outwards and gather resources to upgrade yourself at the shop.
+                    You must dig further into the earth to find more resources to collect and drag back to base. The intense
                     feeling of satisfaction when you upgrade yourself creates an addictive urge to keep playing. </p>
-            
-                <div class="job" id="images2">
-                    <img src="img/caveCrawler.PNG"  alt="Doots never die screenshot" id="projectImage">
-                </div>
-            </li>
-
-            <li class="job">
-                <h2>What I did</h2>
-                <p>I made the deployable items for the game. These items cost resources and the player starts with a limited 
-                    amount of them. I made a torch item that lights up an area around it so the player can more easily navigate 
-                    the pitch blackness around them. I also made a bomb item that explodes, destroying all the minable blocks 
-                    around it instantly. 
+<div class="job" id="images2">
+<img src="img/caveCrawler.PNG"  alt="Cave Crawler mining gameplay" id="projectImage" loading="lazy">
+</div>
+</li>
+<li class="job">
+<h2>What I did</h2>
+<p>I made the deployable items for the game. These items cost resources and the player starts with a limited
+                    amount of them. I made a torch item that lights up an area around it so the player can more easily navigate
+                    the pitch blackness around them. I also made a bomb item that explodes, destroying all the minable blocks
+                    around it instantly.
                 </p>
-            
-                <div class="job" id="images2">
-                    <img src="img/caveCrawlerItems.PNG" alt="The player next to a deployed bomb and torch">
-                    <img src="img/caveCrawlerMapGeneration.PNG" alt="The map being generated around where the player explores">
-                </div>
-                <br>
-
-                <p>I created the level generation for this game. The map generation is seeded random, so reusing the same starting 
-                    seed will generate the same map. The map is broken down into chunks that generate around the player. Whenever 
-                    the player enters a new chunk, the surrounding chunks are generated around them. This allows the player to explore 
+<div class="job" id="images2">
+<img src="img/caveCrawlerItems.PNG" alt="The player next to a deployed bomb and torch" loading="lazy">
+<img src="img/caveCrawlerMapGeneration.PNG" alt="The map being generated around where the player explores" loading="lazy">
+</div>
+<br>
+<p>I created the level generation for this game. The map generation is seeded random, so reusing the same starting
+                    seed will generate the same map. The map is broken down into chunks that generate around the player. Whenever
+                    the player enters a new chunk, the surrounding chunks are generated around them. This allows the player to explore
                     endlessly without a superfluous amount of new wall tiles being created. </p>
-            </li>
-        </ul>
-    </div>
-
-    
+</li>
+</ul>
+<div class="actions">
+<a class="text-link" href="https://github.com/adityaspt/603-Game-4/tree/Dev">View source ↗</a>
+</div>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

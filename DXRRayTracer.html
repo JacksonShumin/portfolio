@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Realtime Ray Tracer | Jackson Shuminski</title>
+<meta name="description" content="A custom DXR pipeline with reflections, refraction, and diffuse lighting, written in HLSL.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Realtime Ray Tracer | Jackson Shuminski">
+<meta property="og:description" content="A custom DXR pipeline with reflections, refraction, and diffuse lighting, written in HLSL.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    <div id="work">
-        <h1>Realtime Ray Tracer</h1>
-        <ul>
-            <li class="job">
-                <h2>Overview</h2>
-                <p>I used DirectX12 to create a Ray Tracing pipeline that could read OBJ files and generate a BLAS for each unique mesh and update a TLAS every frame to pass into the DirectXR Raytracing Pipeline to generate an image. I wrote a Ray Generation, Closest Hit, and Miss shader to be used in HLSL for generating an image. It reuses many of the features from my other DirectX11 projects, like an Entity system and a controllable camera. </p>
-            </li>
-            
-            <div class="job" id="images2">
-                <img src="img/RealtimeTrace2.png"  alt="Raytracer screen shot">
-                <img src="img/RealtimeTrace1.png"  alt="Raytracer screen shot">
-            </div>
-
-            <li class="job">
-                <h2>Raytracing Shader</h2>
-                <p>The Generation shader creates 30 rays per pixel, and each one can bounce 15 times before returning black. They are randomly scattered on the pixel and launched to avoid any aliasing and provide Raytraced diffuse lighting by averaging out random bounces. </p><br>
-                <p>The miss shader just returns a fixed sky color, which is a gradient lerped from a light blue color to a white color depending on the Y value of the rays direction; where straight up is white and straight down is light blue. </p><br>
-                <p>The Closest Hit shader uses the three vertices of the triangle hit to interpolate their position and normal using barycentric coordinates. This vertex is converted to world space and used in diffuse, reflection, and refraction. The Material is passed in as 6 floats: color, roughness, whether it is transparent, and its index of refraction. Diffusion uses a random ray on the surface of a unit sphere moved one unit in the normal direction as a direction to move towards. Reflection simply reflects along the normal. For roughness values between 0 and 1, I calculate a diffuse ray and a reflected ray and use the roughness to slerp the normal from reflection to diffuse. When refraction is true, it uses the index of refraction to refract the ray’s normal, using the reciprocal when the ray hits a back face. </p>
-            </li>
-                
-        </ul>
-    </div>
-
-    
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="case-study">
+<a class="back-link" href="projects.html">← Back to projects</a>
+<h1>Realtime Ray Tracer</h1>
+<div class="case-summary">
+<div class="eyebrow">DirectX 12 · Solo project</div>
+<p>A custom DXR pipeline with reflections, refraction, and diffuse lighting, written in HLSL.</p>
+</div>
+<ul>
+<li class="job">
+<h2>Overview</h2>
+<p>I used DirectX12 to create a Ray Tracing pipeline that could read OBJ files and generate a BLAS for each unique mesh and update a TLAS every frame to pass into the DirectXR Raytracing Pipeline to generate an image. I wrote a Ray Generation, Closest Hit, and Miss shader to be used in HLSL for generating an image. It reuses many of the features from my other DirectX11 projects, like an Entity system and a controllable camera. </p>
+</li>
+<div class="job" id="images2">
+<img src="img/RealtimeTrace2.png"  alt="Raytracer screen shot" loading="lazy">
+<img src="img/RealtimeTrace1.png"  alt="Raytracer screen shot" loading="lazy">
+</div>
+<li class="job">
+<h2>Raytracing Shader</h2>
+<p>The Generation shader creates 30 rays per pixel, and each one can bounce 15 times before returning black. They are randomly scattered on the pixel and launched to avoid any aliasing and provide Raytraced diffuse lighting by averaging out random bounces. </p>
+<br>
+<p>The miss shader just returns a fixed sky color, which is a gradient lerped from a light blue color to a white color depending on the Y value of the rays direction; where straight up is white and straight down is light blue. </p>
+<br>
+<p>The Closest Hit shader uses the three vertices of the triangle hit to interpolate their position and normal using barycentric coordinates. This vertex is converted to world space and used in diffuse, reflection, and refraction. The Material is passed in as 6 floats: color, roughness, whether it is transparent, and its index of refraction. Diffusion uses a random ray on the surface of a unit sphere moved one unit in the normal direction as a direction to move towards. Reflection simply reflects along the normal. For roughness values between 0 and 1, I calculate a diffuse ray and a reflected ray and use the roughness to slerp the normal from reflection to diffuse. When refraction is true, it uses the index of refraction to refract the ray’s normal, using the reciprocal when the ray hits a back face. </p>
+</li>
+</ul>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

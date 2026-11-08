@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles2.css">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience | Jackson Shuminski</title>
+<meta name="description" content="Professional graphics development, VR research, and interactive web experiences by Jackson Shuminski.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Experience | Jackson Shuminski">
+<meta property="og:description" content="Professional graphics development, VR research, and interactive web experiences by Jackson Shuminski.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    <div id="projects">
-        <h1>Work Experience</h1>
-        <ul>
-
-            <a href="KeenDev.html"><li class="project">
-                <div class="intro">
-                    <h2 class="title">VRage Developer, Water and Fluids</h2>
-                    <p>At Keen Software House I joined a small team of experts developing <strong>Volumetric Water</strong> on the VRage Game Engine for 
-                        Space Engineers 2.  </p><br>
-                        <img src="img/waterdebug.png"  alt="Synthetic eyeball" width=100%><br> 
-                
-                </div> 
-                
-            </li></a>
-            
-            <a href="FoundryResearch.html"><li class="project">
-                <div class="intro">
-                    <h2 class="title">Foundry Researcher</h2>
-                    <p>I worked with a very small team of researchers funded by Foundry to create a multiplayer VR learning game, 
-                        then use it in a user study for a research publication.</p>
-                        <img src="img/FoundryMultiplayer.PNG"  alt="Synthetic eyeball" width=100%><br> 
-                
-                </div> 
-                
-            </li></a>
-
-            <a href="RITEyes.html"><li class="project">
-                <div class="intro">
-                    <h2 class="title">Meta Reality Labs</h2>
-                    <p>I worked with a team of researchers under a grant by Meta Reality Labs to make a Machine Learning Algorithm for eye-tracking. </p>
-                        <img src="img/head_on_eye.png"  alt="Synthetic eyeball" width=100%><br>  
-                </div> 
-            </li></a>
- 
-            <a href="ChangelingVR.html"><li class="project">
-                <div class="intro">
-                    <h2 class="title">Changeling VR</h2>
-                    <p>
-                        I worked on the website changelingvr.com as a web developer using three.js and WebGL.  
-                    </p>
-                    <img src="img/changeling_father2.PNG"  alt="Another Changeling father level screenshot" width=100%>
-                </div> 
-            </li></a>
-        </ul>
-    </div>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" >Projects</a>
+<a href="work.html" aria-current="page">Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-intro">
+<div class="eyebrow">Professional work & research</div>
+<h1>Complex problems.<br>Shared progress.</h1>
+<p>From experimental water systems to multiplayer VR research, I work across graphics, simulation, and interactive experiences. Explore the technical contributions behind each role.</p>
+<div class="actions">
+<a class="button" href="resume/ShuminskiResume.pdf" download="Jackson-Shuminski-Resume.pdf">Download resume (PDF) <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<section class="archive" aria-label="Professional experience">
+<a class="experience-row" href="KeenDev.html">
+<span class="row-number">01</span>
+<div>
+<h3>Keen Software House</h3>
+<small>VRage Developer · Water & Fluids</small>
+</div>
+<p>Developed experimental volumetric water for the VRage engine used in Space Engineers 2, including planetary oceans and water raymarching.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="FoundryResearch.html">
+<span class="row-number">02</span>
+<div>
+<h3>Foundry</h3>
+<small>VR Researcher · 2022</small>
+</div>
+<p>Built a multiplayer VR learning experience in Unity and coordinated user studies, from participant recruitment to study sessions.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="RITEyes.html">
+<span class="row-number">03</span>
+<div>
+<h3>Eye-tracking research</h3>
+<small>Research supported by Meta Reality Labs</small>
+</div>
+<p>Developed synthetic eye-image pipelines and anatomically detailed 3D models to support machine learning research.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="ChangelingVR.html">
+<span class="row-number">04</span>
+<div>
+<h3>Changeling VR</h3>
+<small>Web Developer · Interactive 3D</small>
+</div>
+<p>Built a browser-based 3D maze with three.js, quaternion-based navigation, custom collision detection, and original 3D assets.</p>
+<span aria-hidden="true">↗</span>
+</a>
+</section>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

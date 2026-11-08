@@ -1,55 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles2.css">
-    <link rel="stylesheet" href="styles/waterSimStyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changeling VR | Jackson Shuminski</title>
+<meta name="description" content="Built a first-person 3D maze in the browser, including wall-walking navigation, quaternion-based movement, 3D assets, and collision detection.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Changeling VR | Jackson Shuminski">
+<meta property="og:description" content="Built a first-person 3D maze in the browser, including wall-walking navigation, quaternion-based movement, 3D assets, and collision detection.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    
-    <div id="work"> 
-    <h1>Changeling VR</h1>
-    <ul><li class="job">
-            <p>
-                I worked on the website <a href="https://www.changelingvr.com/">changelingvr.com</a> as a web developer. I used HTML, CSS, and a lot of JavaScript to 
-                build a fully interactable web experience. I worked on the character experiences using three.js to make a first-person 3D maze. It is a verticle maze 
-                with no fixed up/down direction where you navigate by walking on the walls. I designed this maze using a complex system of quaternions and linear algebra 
-                so that you could jump or stroll through the various tunnel ways satisfyingly. 
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" >Projects</a>
+<a href="work.html" aria-current="page">Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="case-study">
+<a class="back-link" href="work.html">← Back to experience</a>
+<h1>Changeling VR</h1>
+<div class="case-summary">
+<div class="eyebrow">Interactive web · three.js</div>
+<p>Built a first-person 3D maze in the browser, including wall-walking navigation, quaternion-based movement, 3D assets, and collision detection.</p>
+</div>
+<ul>
+<li class="job">
+<p>
+                I worked on the website <a href="https://www.changelingvr.com/">changelingvr.com</a> as a web developer. I used HTML, CSS, and a lot of JavaScript to
+                build a fully interactable web experience. I worked on the character experiences using three.js to make a first-person 3D maze. It is a vertical maze
+                with no fixed up/down direction where you navigate by walking on the walls. I designed this maze using a complex system of quaternions and linear algebra
+                so that you could jump or stroll through the various tunnel ways satisfyingly.
             </p>
-        </li>
-        
-        <img src="img/changeling_father2.PNG"  alt="Another Changeling father level screenshot" width=100%>
-            <li class="job">
-            <p>
-                I made 3D models and exported them as GLBs for the experience. I built most of the items inside the maze, including the exit tokens, the exit, and the 
-                Maze itself. 
+</li>
+<img src="img/changeling_father2.PNG"  alt="Another Changeling father level screenshot" loading="lazy">
+<li class="job">
+<p>
+                I made 3D models and exported them as GLBs for the experience. I built most of the items inside the maze, including the exit tokens, the exit, and the
+                Maze itself.
             </p>
-            </li>
-
-            <div class="job" id="images2">
-                <img src="img/changeling_father.PNG"  alt="Changeling father level screenshot" width=100%>
-                <img src="img/changeling_father3.PNG"  alt="Another Changeling father level screenshot" width=100%>
-            </div>
-
-            <li class="job">
-            <p>
-                I made a complex but lightweight collision system for the player to bump off the objects in the scene that used non-axis-aligned bounding boxes. In the 
-                game they are invisible but I added debug boxes that can be activated in testing that appear as transparent green boxes. 
+</li>
+<div class="job" id="images2">
+<img src="img/changeling_father.PNG"  alt="Changeling father level screenshot" loading="lazy">
+<img src="img/changeling_father3.PNG"  alt="Another Changeling father level screenshot" loading="lazy">
+</div>
+<li class="job">
+<p>
+                I made a complex but lightweight collision system for the player to bump off the objects in the scene that used non-axis-aligned bounding boxes. In the
+                game they are invisible but I added debug boxes that can be activated in testing that appear as transparent green boxes.
             </p>
-        </li>
-
-        <img src="img/changeling_father4.PNG"  alt="Another Changeling father level screenshot" width=100%>
-    </ul></div>
-
+</li>
+<img src="img/changeling_father4.PNG"  alt="Another Changeling father level screenshot" loading="lazy">
+</ul>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

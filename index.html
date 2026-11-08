@@ -1,41 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/stylesAM.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphics & Game Developer | Jackson Shuminski</title>
+<meta name="description" content="Jackson Shuminski — graphics, fluid simulation, and gameplay programming. Explore professional work and personal experiments.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Graphics & Game Developer | Jackson Shuminski">
+<meta property="og:description" content="Jackson Shuminski — graphics, fluid simulation, and gameplay programming. Explore professional work and personal experiments.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" >Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero wrap">
+<div class="hero-copy">
+<div class="eyebrow">Graphics · Simulation · Gameplay</div>
+<h1>Building worlds.<br>
+<span>Down to the<br>last particle.</span>
+</h1>
+<p>I’m Jackson Shuminski, a graphics and game developer turning complex systems into immersive experiences. From planetary oceans to GPU simulations, I bring the math to life.</p>
+<div class="actions">
+<a class="button" href="projects.html">Explore my work <span aria-hidden="true">↗</span>
+</a>
+<a class="text-link" href="#about">A little about me <span aria-hidden="true">↓</span>
+</a>
+<a class="text-link" href="resume/ShuminskiResume.pdf" download="Jackson-Shuminski-Resume.pdf">Download resume (PDF) <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<div>
+<a class="hero-art" style="display:block" href="KeenDev.html" aria-label="Explore my planetary water work at Keen Software House">
+<img src="img/planetarywater.png" alt="Planetary ocean surfaces developed for the VRage engine" fetchpriority="high">
+<span class="image-index">RENDER / 001</span>
+<div class="art-label">
+<span>
+<small>Professional work · Keen Software House</small>Water, on a planetary scale.</span>
+<span aria-hidden="true">↗</span>
+</div>
+</a>
+<div class="hero-note">
+<span>VRage engine / Space Engineers 2</span>
+<span>Simulation & rendering</span>
+</div>
+</div>
+</section>
+<div class="wrap expertise-strip">
+<small>Working at the intersection of</small>
+<span>Real-time rendering</span>
+<span>GPU simulation</span>
+<span>Gameplay engineering</span>
+<span>Interactive 3D</span>
+</div>
+<section class="section wrap" id="selected-work">
+<div class="section-heading">
+<div>
+<div class="eyebrow">Ideas made tangible</div>
+<h2>Selected projects<span class="count">/ 05</span>
+</h2>
+</div>
+<a class="text-link" href="projects.html">View all projects <span aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="project-grid">
+<article class="project-card" data-category="graphics games">
+<a href="vulkanEngine.html"><div class="card-image"><img src="img/vulkan-engine/overview.png" alt="PBR-rendered vases on a gold surface under colored point lights and a nebula skybox" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></div>
+<div class="card-body"><div class="card-meta"><span>Vulkan · Personal engine project</span><span>01</span></div><h3>Vulkan Game Engine</h3><p>A C++ engine combining PBR rendering, an interactive scene editor, GPU object picking, and Jolt rigid-body physics.</p><div class="tags"><span>C++ / Vulkan</span><span>Engine tools</span><span>PBR</span></div></div></a>
+</article>
 
-    
-    <p class="job" id="aboutMe">Hello! I am Jackson Shuminski and I graduated from Rochester Institute of Technology with a BS/MS in Game Design and Development. 
-        I have a wide variety of talents and skills I have gathered from my years of experience working on games. </p>
-        
-    <img src="img/suit_face.jpg" id="face">
-
-    <div id="skills">
-        <ul>
-            <li class="skill">
-                <h2>Known Engines: </h2>
-                <p>Unity, Unreal Engine, Mono Game, WebGL, OpenGL, DirectX11, DirectX12, DirectXR</p>
-            </li>
-            <li class="skill">
-                <h2>Known Languages: </h2>
-                <p>C#, Python, HLSL, Unity Shader Language, JAVA, C, C++, HTML, CSS, JavaScript, PHP, UNIX, windows forms</p> 
-            </li>
-            <li class="skill">
-                <h2>Known Softwares:</h2>
-                <p>Visual Studio Code, Visual Studio Enterprise, Photoshop, Maya, PowerPoint, WORD, EXCEL</p>
-            </li>
-        </ul>
-    </div>
-
+<article class="project-card" data-category="graphics simulation">
+<a href="VolumetricSmoke.html">
+<div class="card-image">
+<img src="img/VolumetricSmoke1.PNG" alt="Volumetric smoke project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>Unreal Engine 5 · Solo project</span>
+<span>02</span>
+</div>
+<h3>Volumetric smoke</h3>
+<p>A GPU fluid simulation built with compute shaders, 3D textures, and Blueprint controls for live experimentation.</p>
+<div class="tags">
+<span>C++</span>
+<span>Compute shaders</span>
+<span>Fluid simulation</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="graphics simulation">
+<a href="waterSim.html">
+<div class="card-image">
+<img src="img/waterSim.PNG" alt="DirectX 11 water simulation project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>DirectX 11 · Solo project</span>
+<span>03</span>
+</div>
+<h3>DirectX 11 water simulation</h3>
+<p>From layered waves to buoyant objects: a custom water simulation and rendering pipeline built from the ground up.</p>
+<div class="tags">
+<span>DirectX 11</span>
+<span>HLSL</span>
+<span>Water rendering</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="simulation graphics">
+<a href="BOIDs.html">
+<div class="card-image">
+<img src="img/boids1.PNG" alt="GPU flocking simulation project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>Unity · Solo project</span>
+<span>04</span>
+</div>
+<h3>GPU flocking simulation</h3>
+<p>Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.</p>
+<div class="tags">
+<span>Unity</span>
+<span>Compute shaders</span>
+<span>Optimization</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="games">
+<a href="pact.html">
+<div class="card-image">
+<img src="img/thePact.PNG" alt="The Pact project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>Unreal Engine 5 · Team project</span>
+<span>05</span>
+</div>
+<h3>The Pact</h3>
+<p>A third-person roguelike shooter. I developed player controls, projectiles, and a shared ability system for players and enemies.</p>
+<div class="tags">
+<span>Gameplay systems</span>
+<span>Blueprints</span>
+<span>Combat</span>
+</div>
+</div>
+</a>
+</article>
+</div>
+</section>
+<section class="section experience-section">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<div class="eyebrow">Beyond personal projects</div>
+<h2>Experience in practice.</h2>
+</div>
+<a class="text-link" href="work.html">Explore my experience ↗</a>
+</div>
+<a class="experience-row" href="KeenDev.html">
+<span class="row-number">01</span>
+<div>
+<h3>Keen Software House</h3>
+<small>VRage Developer · Water & Fluids</small>
+</div>
+<p>Developed experimental volumetric water for the VRage engine used in Space Engineers 2, including planetary oceans and water raymarching.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="FoundryResearch.html">
+<span class="row-number">02</span>
+<div>
+<h3>Foundry</h3>
+<small>VR Researcher · 2022</small>
+</div>
+<p>Built a multiplayer VR learning experience in Unity and coordinated user studies, from participant recruitment to study sessions.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="RITEyes.html">
+<span class="row-number">03</span>
+<div>
+<h3>Eye-tracking research</h3>
+<small>Research supported by Meta Reality Labs</small>
+</div>
+<p>Developed synthetic eye-image pipelines and anatomically detailed 3D models to support machine learning research.</p>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="experience-row" href="ChangelingVR.html">
+<span class="row-number">04</span>
+<div>
+<h3>Changeling VR</h3>
+<small>Web Developer · Interactive 3D</small>
+</div>
+<p>Built a browser-based 3D maze with three.js, quaternion-based navigation, custom collision detection, and original 3D assets.</p>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section class="section wrap" id="about">
+<div class="about-layout">
+<div>
+<img class="about-photo" src="img/suit_face.jpg" alt="Portrait of Jackson Shuminski" loading="lazy">
+</div>
+<div>
+<div class="eyebrow">A little about me</div>
+<h2>Curious by nature.<br>Technical by craft.</h2>
+<p>I’m Jackson, a game developer with a BS/MS in Game Design and Development from Rochester Institute of Technology.</p>
+<p>My work spans real-time graphics, fluid simulation, gameplay systems, and interactive 3D experiences. I enjoy taking a complex idea from the math behind it to something you can see, play, and explore.</p>
+<div class="skill-groups">
+<div>
+<h3>Graphics & simulation</h3>
+<p>DirectX 11 / 12, DXR, HLSL, OpenGL, WebGL</p>
+</div>
+<div>
+<h3>Game development</h3>
+<p>Unreal Engine, Unity, C++, C#, MonoGame</p>
+</div>
+<div>
+<h3>Tools & languages</h3>
+<p>Python, JavaScript, three.js, Maya, Photoshop</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

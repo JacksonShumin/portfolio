@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offline Ray Tracer | Jackson Shuminski</title>
+<meta name="description" content="Offline Ray Tracer: a project by Jackson Shuminski.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Offline Ray Tracer | Jackson Shuminski">
+<meta property="og:description" content="Offline Ray Tracer: a project by Jackson Shuminski.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    <div id="work">
-        <h1>Offline Ray Tracer</h1>
-        <ul>
-            <li class="job">
-                <h2>Overview</h2>
-                <p>I followed the <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">raytracing in a weekend</a> guide but I implemented it using the DirectX Math libraries. Most of the ray related math I followed directly from the guide however I did make a few important deviations. This guide went over how to raytrace spheres with reflectiveness (ranging from diffuse to mirror/metal), and refractiveness.</p>
-                <img src="img/raytrace4.PNG"  alt="Doots never die screenshot">
-                <p>This image has 500 rays  per pixel and 15 bounces per ray</p>
-            </li>
-            <li class="job">
-                <h2>Deviations</h2>
-                <p>The first deviation is that the texture is displayed using DirectX instead of saving it to a file. I also have the image process 5 pixels per frame so that you can watch the progress of the image, because it is very very slow to do this on the CPU. Especially for high fidelity images. 
-                </p><br>
-                <p>The second important deviation is how I generate the rays from the camera. I still use things like random locations on the pixel for anit-aliasing and a camera lens radius for depth of field. The difference is that I generate the rays uses an inverted WVP matrix taken from my old “camera” class to turn camera coordinates into rays. </p>
-            </li>
-        </ul>
-    </div>
-
-    
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="case-study">
+<a class="back-link" href="projects.html">← Back to projects</a>
+<h1>Offline Ray Tracer</h1>
+<ul>
+<li class="job">
+<h2>Overview</h2>
+<p>I followed the <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">raytracing in a weekend</a> guide but I implemented it using the DirectX Math libraries. Most of the ray related math I followed directly from the guide however I did make a few important deviations. This guide went over how to raytrace spheres with reflectiveness (ranging from diffuse to mirror/metal), and refractiveness.</p>
+<img src="img/raytrace4.PNG"  alt="Doots never die screenshot" loading="lazy">
+<p>This image has 500 rays  per pixel and 15 bounces per ray</p>
+</li>
+<li class="job">
+<h2>Deviations</h2>
+<p>The first deviation is that the texture is displayed using DirectX instead of saving it to a file. I also have the image process 5 pixels per frame so that you can watch the progress of the image, because it is very very slow to do this on the CPU. Especially for high fidelity images.
+                </p>
+<br>
+<p>The second important deviation is how I generate the rays from the camera. I still use things like random locations on the pixel for anit-aliasing and a camera lens radius for depth of field. The difference is that I generate the rays uses an inverted WVP matrix taken from my old “camera” class to turn camera coordinates into rays. </p>
+</li>
+</ul>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

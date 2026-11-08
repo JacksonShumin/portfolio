@@ -1,110 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles.css">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphics & Simulation | Jackson Shuminski</title>
+<meta name="description" content="Graphics programming and simulation projects by Jackson Shuminski.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="Graphics & Simulation | Jackson Shuminski">
+<meta property="og:description" content="Graphics programming and simulation projects by Jackson Shuminski.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="graphics.html">Graphics</a></li>
-        <li><a href="websites.html">Websites</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="page-intro">
+<div class="eyebrow">Graphics & simulation</div>
+<h1>The systems behind<br>the pixels.</h1>
+<p>Experiments in rendering, fluid simulation, and GPU programming.</p>
+</div>
+<section class="archive project-grid" aria-label="Graphics projects">
+<article class="project-card" data-category="graphics games">
+<a href="vulkanEngine.html"><div class="card-image"><img src="img/vulkan-engine/overview.png" alt="PBR-rendered vases on a gold surface under colored point lights and a nebula skybox" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></div>
+<div class="card-body"><div class="card-meta"><span>Vulkan · Personal engine project</span><span>01</span></div><h3>Vulkan Game Engine</h3><p>A C++ engine combining PBR rendering, an interactive scene editor, GPU object picking, and Jolt rigid-body physics.</p><div class="tags"><span>C++ / Vulkan</span><span>Engine tools</span><span>PBR</span></div></div></a>
+</article>
 
-    <div id="projects">
-        <h1>Graphics Projects</h1>
-        <ul>
-            <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">Realtime Volumetric Smoke in Unreal Engine 5</h2>
-                    <p class="credit">Made solo as an passion project</p>
-                </div>
-                <img src="img/VolumetricSmoke1.PNG"  alt="Volumetric Smoke screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="VolumetricSmoke.html">Read More</a></h2>
-                </div>
-            </li>
-            <!-- <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">Offline Raytracer</h2>
-                    <p class="credit">Made solo as an academic project</p>
-                </div>
-                <img src="img/raytrace4.PNG"  alt="Offline Raytracer screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="cppRayTracer.html">Read More</a></h2>
-                </div>
-            </li> -->
-
-            <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">GPU BOIDs</h2>
-                    <p class="credit">Made solo as a passion project</p>
-                </div>
-                <img src="img/boids1.PNG"  alt="BOIDs screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="BOIDs.html">Read More</a></h2>
-                </div>
-            </li>
-
-            <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">DX11 Water Simulation</h2>
-                    <p class="credit">Made solo as a passion project</p>
-                </div>
-                <img src="img/waterSim.PNG"  alt="Deaf Deaf World screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="waterSim.html">Read More</a></h2>
-                    <a href="https://github.com/JacksonShuminski/DX11WaterSim">Download code from GitHub</a><br>
-                    <a href="https://drive.google.com/file/d/1pU9I_UI3FegI-rcLcg7GhScOS6ZhFJgY/view?usp=sharing">Download Build from Google Drive</a><br>
-                </div>
-            </li>
-            <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">Realtime Raytracer</h2>
-                    <p class="credit">Made solo as an academic project</p>
-                </div>
-                <img src="img/RealtimeTrace2.png"  alt="Realtime Raytracer screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="DXRRayTracer.html">Read More</a></h2>
-                </div>
-            </li>
-            <li class="project" id="bbb">
-                <div class="intro">
-                    <h2 class="title">Banana Boat Bonanza</h2>
-                    <p class="desc">In this frantic fever-dream, sail across space on your mighty banana boat and avoid asteroids which bring crippling head trauma. 
-                                Use A and D to steer your way through turbulent space while trying to keep the dream alive. </p>
-                    <p class="credit">Made solo as an academic project</p>
-                </div>
-                <img src="img/banana-boat.PNG"  alt="Doots never die screenshot">
-                <div class="WhatIDid">
-                    <h2>What I did</h2>
-                    <p>Used DirectX to make the game engine</p>
-                    <p>Used HLSL to make Phong lighting with normal maps</p>
-                    <p>Used HLSL to make a post processing blur</p>
-                    <p>Used HLSL to make a particle system for the flames</p>
-                    <a href="https://github.com/JacksonShuminski/BananaBoatBonanzaBuild.git">Download Build from Github</a><br>
-                    <a href="https://github.com/JacksonShuminski/BananaBoatBanaza.git">Download Code from Github</a>
-                </div>
-            </li>
-            <li class="project" id="dnd">
-                <div class="intro">
-                    <h2 class="title">Doots Never Die</h2>
-                    <p class="credit">Made as an academic project with Alex Lawrence, Noah Quintin, Saumil Savargaonkar, and Zach Selsley</p>
-                </div>
-                <img src="img/dnd.PNG"  alt="Doots never die screenshot">
-                <div class="WhatIDid">
-                    <h2><a href="dnd.html">Read More</a></h2>
-                    <a href="https://jacksonshuminski.github.io/Doots-Never-Die/">Play the web build now</a><br>
-                    <a href="https://github.com/JacksonShuminski/Doots-Never-Die">Download Code from Github</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+<article class="project-card" data-category="graphics simulation">
+<a href="VolumetricSmoke.html">
+<div class="card-image">
+<img src="img/VolumetricSmoke1.PNG" alt="Volumetric smoke project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>Unreal Engine 5 · Solo project</span>
+<span>02</span>
+</div>
+<h3>Volumetric smoke</h3>
+<p>A GPU fluid simulation built with compute shaders, 3D textures, and Blueprint controls for live experimentation.</p>
+<div class="tags">
+<span>C++</span>
+<span>Compute shaders</span>
+<span>Fluid simulation</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="graphics simulation">
+<a href="waterSim.html">
+<div class="card-image">
+<img src="img/waterSim.PNG" alt="DirectX 11 water simulation project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>DirectX 11 · Solo project</span>
+<span>03</span>
+</div>
+<h3>DirectX 11 water simulation</h3>
+<p>From layered waves to buoyant objects: a custom water simulation and rendering pipeline built from the ground up.</p>
+<div class="tags">
+<span>DirectX 11</span>
+<span>HLSL</span>
+<span>Water rendering</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="simulation graphics">
+<a href="BOIDs.html">
+<div class="card-image">
+<img src="img/boids1.PNG" alt="GPU flocking simulation project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>Unity · Solo project</span>
+<span>04</span>
+</div>
+<h3>GPU flocking simulation</h3>
+<p>Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.</p>
+<div class="tags">
+<span>Unity</span>
+<span>Compute shaders</span>
+<span>Optimization</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="graphics">
+<a href="DXRRayTracer.html">
+<div class="card-image">
+<img src="img/RealtimeTrace2.png" alt="Real-time ray tracer project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>DirectX 12 · Solo project</span>
+<span>05</span>
+</div>
+<h3>Real-time ray tracer</h3>
+<p>A custom DXR pipeline with reflections, refraction, and diffuse lighting, written in HLSL.</p>
+<div class="tags">
+<span>DirectX 12</span>
+<span>DXR</span>
+<span>HLSL</span>
+</div>
+</div>
+</a>
+</article>
+<article class="project-card" data-category="games graphics">
+<a href="https://github.com/JacksonShuminski/BananaBoatBanaza">
+<div class="card-image">
+<img src="img/banana-boat.PNG" alt="Banana Boat Bonanza project screenshot" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</div>
+<div class="card-body">
+<div class="card-meta">
+<span>DirectX 11 · Solo project</span>
+<span>06</span>
+</div>
+<h3>Banana Boat Bonanza</h3>
+<p>A custom-engine arcade game with normal-mapped lighting, post-processing, and a particle system for engine flames.</p>
+<div class="tags">
+<span>DirectX 11</span>
+<span>HLSL</span>
+<span>Custom engine</span>
+</div>
+</div>
+</a>
+</article>
+</section>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>

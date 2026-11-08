@@ -1,69 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Jackson Shuminski Portfolio</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="styles/styles2.css">
-    <link rel="stylesheet" href="styles/waterSimStyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
-	<script src="src/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU BOIDs | Jackson Shuminski</title>
+<meta name="description" content="Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.">
+<meta name="theme-color" content="#182b2b">
+<meta property="og:title" content="GPU BOIDs | Jackson Shuminski">
+<meta property="og:description" content="Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="styles/portfolio.css">
+<script src="src/portfolio.js" defer>
+</script>
 </head>
-<body>
-    <h1 id="top">Jackson Shuminski: Game Developer </h1>
-    <ul id="topbar">
-        <li><a href="work.html">Work Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">About Me</a></li>
-    </ul>
-    <div id="work">
-        <h1>GPU BOIDs</h1>
-        <ul>
-            <li class="job">
-                <h2>Tens of Thousands of BOIDs</h2>
-                <p>In order to get more familiar with Compute Shaders in Unity, I made a BOID simulation using the many threads of a Compute Shader in Unity. 
-                    BOIDs are agents with flocking behavior and can appear like a swarm of fish or birds. By leveraging the power of the GPU about I could simulate 
-                    about 32 thousand BOIDs in Unity with decent performance. 
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Jackson Shuminski home">
+<span class="brand-mark">JS.</span>
+<span>Jackson Shuminski<small>Graphics & game developer</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="work.html" >Experience</a>
+<a href="index.html#about">About</a>
+<a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</div>
+</header>
+<main id="main" class="case-study">
+<a class="back-link" href="projects.html">← Back to projects</a>
+<h1>GPU BOIDs</h1>
+<div class="case-summary">
+<div class="eyebrow">Unity · Solo project</div>
+<p>Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.</p>
+</div>
+<ul>
+<li class="job">
+<h2>Tens of Thousands of BOIDs</h2>
+<p>In order to get more familiar with Compute Shaders in Unity, I made a BOID simulation using the many threads of a Compute Shader in Unity.
+                    BOIDs are agents with flocking behavior and can appear like a swarm of fish or birds. Using the GPU, I could simulate
+                    about 32 thousand BOIDs in Unity in this experiment.
                 </p>
-            </li>
-                
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/t2SDiu2ijGA?si=9DJNluYOhush4g86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <li class="job">
-                <h2>BOIDs</h2>
-                <p>The BOIDs work by following a few simple rules. They avoid nearby BOIDs, move toward the center of the flock, and try to match velocities 
-                    with other nearby BOIDs. I included a box to act as bounds that they would avoid and get teleported to the other side should they 
+</li>
+<iframe loading="lazy" height="315" src="https://www.youtube.com/embed/t2SDiu2ijGA?si=9DJNluYOhush4g86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<li class="job">
+<h2>BOIDs</h2>
+<p>The BOIDs work by following a few simple rules. They avoid nearby BOIDs, move toward the center of the flock, and try to match velocities
+                    with other nearby BOIDs. I included a box to act as bounds that they would avoid and get teleported to the other side should they
                     cross it.
                 </p>
-            </li>
-
-            
-            <div class="job" id="images2">
-                <img src="img/boids1.PNG"  alt="boids screenshot">
-                <img src="img/largeboid.png"  alt="boids screenshot">
-            </div>
-            
-
-            <li class="job">
-                <h2>BOID Castes</h2>
-                <p>
-                    I made a special BOID that was marked so that it would behave differently and the others would treat it differently. My idea was a 
-                    “Smelly BOID” that the others would avoid much more strongly, but it would feel lonely and muscle to the swarm's center. To make it 
-                    more distinguished, I made it huge and green with the old high-poly mesh. Thanks to some optimizations I made, I was also able to have 
+</li>
+<div class="job" id="images2">
+<img src="img/boids1.PNG"  alt="boids screenshot" loading="lazy">
+<img src="img/largeboid.png"  alt="boids screenshot" loading="lazy">
+</div>
+<li class="job">
+<h2>BOID Castes</h2>
+<p>
+                    I made a special BOID that was marked so that it would behave differently and the others would treat it differently. My idea was a
+                    “Smelly BOID” that the others would avoid much more strongly, but it would feel lonely and muscle to the swarm's center. To make it
+                    more distinguished, I made it huge and green with the old high-poly mesh. Thanks to some optimizations I made, I was also able to have
                     twice as many BOIDs.
                 </p>
-                <br>
-                <h2>Optimization</h2>
-                <p>
-                    In my second simulation, I made some changes so they would run a little quicker, short-circuiting and avoiding costly square roots 
-                    whenever possible. The mesh was reduced to a triangular pyramid, substantially reducing the number of triangles. I also got 
-                    rid of the teleporting to the other side because that was upsetting the swarm in a weird and seemingly unnatural way. 
+<br>
+<h2>Optimization</h2>
+<p>
+                    In my second simulation, I made some changes so they would run a little quicker, short-circuiting and avoiding costly square roots
+                    whenever possible. The mesh was reduced to a triangular pyramid, substantially reducing the number of triangles. I also got
+                    rid of the teleporting to the other side because that was upsetting the swarm in a weird and seemingly unnatural way.
                 </p>
-            </li>
-            
-        </ul>
-    </div>
-
-    
+</li>
+</ul>
+</main>
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-inner">
+<div>
+<div class="eyebrow">Next steps</div>
+<h2 id="contact-title">Let’s talk graphics & games.</h2>
+<p>Have a project or opportunity in mind? Get in touch.</p>
+</div>
+<div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<span>© 2026 Jackson Shuminski</span>
+<div>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/JacksonShuminski">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">LinkedIn ↗</a>
+<a href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
 </body>
 </html>
