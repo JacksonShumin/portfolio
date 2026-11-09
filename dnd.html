@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Doots Never Die | Jackson Shuminski</title>
-<meta name="description" content="A Halloween arcade game. I built CRT-style post-processing, combat systems, and much of the pixel art.">
+<meta name="description" content="Implemented image-processing shaders, targeting, and area-of-effect logic in a team-built Unity game delivered as a web build.">
 <meta name="theme-color" content="#182b2b">
 <meta property="og:title" content="Doots Never Die | Jackson Shuminski">
-<meta property="og:description" content="A Halloween arcade game. I built CRT-style post-processing, combat systems, and much of the pixel art.">
+<meta property="og:description" content="Implemented image-processing shaders, targeting, and area-of-effect logic in a team-built Unity game delivered as a web build.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-js.png">
@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -40,25 +40,17 @@
 <h1>Doots Never Die</h1>
 <div class="case-summary">
 <div class="eyebrow">Unity · Team project</div>
-<p>A Halloween arcade game. I built CRT-style post-processing, combat systems, and much of the pixel art.</p>
+<p>Implemented image-processing shaders, targeting, and area-of-effect logic in a team-built Unity game delivered as a web build.</p>
 </div>
 <ul>
 <li class="job">
 <h2>Overview</h2>
-<p>In this Halloween game inspired by the “doot skeleton” meme, you play as a trumpet-wielding skeleton with nothing left to lose.
-                    Play the web build now and fight off hordes of trick-or-treaters with a bone to pick! With time running out, you must
-                    scare children to prolong your unnatural existence in this plane of reality.</p>
+<p>Doots Never Die is a team-built Unity arcade game with a browser-playable build. I implemented post-processing shaders, targeting, projectile behavior, and area-of-effect interactions, and contributed most of the pixel art.</p>
 </li>
 <img src="img/dnd.PNG"  alt="Doots never die screenshot" id="projectImage" loading="lazy">
 <li class="job">
-<h2>What I did</h2>
-<p>I did a lot of work with Unity image-processing shaders in this project. I made a post processing shader that  mimicked the look
-                    of a glitchy CRT television with several techniques. It warps the entire image in a parabolic shape towards the center to mimic
-                    the look of bulging glass. It also fades out the outside edge of the screen into black. To create a glitchy TV effect I added
-                    screen tearing, where two moving horizontal lines drag across the screen and pull the image to the side. Another subtle way that
-                    I create a glitchy feel is by creating what I call a “Hazy Effect” where the redness and blueness of a pixel are pulled in opposite
-                    directions in a sine wave function of time. The effect is subtle but very effective for making the scene look a bit glitchy. The
-                    final effect I use is the CRT lines, which stripe the screen black to replicate the lines on a CRT television. </p>
+<h2>Engineering contributions</h2>
+<p>I implemented a CRT-style post-processing shader combining parabolic image distortion, edge darkening, moving screen-tear bands, time-varying red and blue channel offsets, and scanlines. These effects run together as an image-processing stage.</p>
 </li>
 <div class="job" id="images2">
 <img src="img/dndScreenEffect.PNG" alt="Doots Never Die with the CRT post-processing effect" loading="lazy">
@@ -71,9 +63,7 @@
 <img src="img/houseColorKeys.PNG" alt="Houses with various color themes" loading="lazy">
 </li>
 <li class="job">
-<p>I created the combat system for this game as well. The skeleton wiggles around as they move so that I wouldn't have to make a walk
-                    animation. I made the shooting, targeting, and yelling area of effect. The yelling uses the post processing shader to create a “shock
-                    wave” around the player that expands away and dissipates as it gets further away. </p>
+<p>I implemented shooting, targeting, and an area-of-effect action. The area effect also drives an expanding, dissipating shockwave in the post-processing shader, linking application behavior to visual feedback.</p>
 <img src="img/skeletonScream.PNG" alt="Skeleton scream effect" loading="lazy">
 </li>
 <li class="job">
@@ -89,8 +79,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

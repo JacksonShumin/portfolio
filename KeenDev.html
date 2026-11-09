@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -65,9 +65,7 @@
 </nav>
 <div class="case-content">
 <div class="job">
-<p>
-                I worked on the VRage game engine used in Space Engineers 2 on the Water Team, developing an experimental water simulation. I used my strong math and physics background to develop a unique non-compressible volumetric fluid simulation. I also spoke for my team in company-wide meetings, breaking down complex concepts into entertaining deliverables I would deliver in front of dozens of people.
-            </p>
+<p>On the Water Team at Keen Software House, I developed experimental incompressible volumetric fluid simulation for the VRage engine used in Space Engineers 2. My work combined numerical methods, simulation architecture, and rendering algorithms. I also presented the team’s technical progress in company-wide meetings.</p>
 </div>
 <div class="job" id="images2">
 <img src="img/waterdebug.png"  alt="DDA path" loading="lazy">
@@ -130,16 +128,14 @@ Your browser does not support embedded video. <a href="vid/pour.mp4">Watch the w
 </section>
 <section class="job" aria-labelledby="dda-raymarcher">
 <h2 id="dda-raymarcher" tabindex="-1"><a class="section-anchor" href="#dda-raymarcher">DDA Raymarcher <span aria-hidden="true">#</span></a></h2>
-<p>
-                In my first year at Keen, one of my first major graphics programming tasks was to completely remake our water-rendering raymarcher. This was a really exciting task where I converted our messy fixed-step raymarcher (which would often miss the water surface entirely!) to a new DDA raymarcher, both more accurate and more efficient.
-            </p>
+<p>I replaced the water renderer’s fixed-step raymarcher with a Digital Differential Analyzer (DDA) traversal. The fixed-step implementation could skip water surfaces; traversing cell boundaries addressed those missed intersections and reduced unnecessary sampling.</p>
 <p>Below shows a before and after with the old raymarcher missing the surface. </p>
 <div class="job" id="images2">
 <img src="img/waterwithholes.png"  alt="DDA path" loading="lazy">
 <img src="img/waternoholes.png"  alt="DDA path" loading="lazy">
 </div>
 <br>
-<h3>An Algorithm that Never Misses</h3>
+<h3>Cell-boundary traversal</h3>
 <p>
                 DDA stands for Digital Differential Analyzer, and it is a great way to raymarch a 3D texture. DDA will take a start point and a direction and give the exact distances that the ray will pass from one “block” into another, as well as provide the direction the ray had to step in. Because it checks every point where new watercells are being evaluated, it is impossible to ever miss the water surface. With fixed step size the water surface can be missed entirely.
             </p>
@@ -156,9 +152,7 @@ Your browser does not support embedded video. <a href="vid/pour.mp4">Watch the w
 <p>
                 The refinement step is where an exact hit location is determined from a hit. This means that in the previous step, the “density” of the water is below some iso-value, and in the current step, it is above that iso-value. The goal of the refinement is to find the exact distance where it crosses that isovalue.
             </p>
-<p>
-                Previously, we did a simple binary search, bisecting the line segment several times right down the middle. This necessitated using a high number of bisections before the location was precise enough to form a smooth surface. I replaced this with a weighted bisection algorithm that used the density at both points to cut the line segment where it predicts the isovalue will be. The result was able to render a smooth surface in just 5 steps instead of 32 steps, saving lots of time.
-            </p>
+<p>The previous implementation used midpoint bisection to refine surface intersections. I replaced it with weighted bisection using the sampled densities to estimate the isovalue crossing. This reduced the refinement needed for a smooth rendered surface from 32 steps to 5.</p>
 </section>
 </div>
 </div>
@@ -167,8 +161,8 @@ Your browser does not support embedded video. <a href="vid/pour.mp4">Watch the w
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vulkan Game Engine | Jackson Shuminski</title>
+<title>C++ / Vulkan Engine | Jackson Shuminski</title>
 <meta name="description" content="A personal C++ Vulkan game engine with PBR rendering, an ImGui editor, GPU object picking, Jolt physics, and configurable post-processing.">
 <meta name="theme-color" content="#182b2b">
-<meta property="og:title" content="Vulkan Game Engine | Jackson Shuminski">
+<meta property="og:title" content="C++ / Vulkan Engine | Jackson Shuminski">
 <meta property="og:description" content="A personal C++ Vulkan game engine with PBR rendering, an ImGui editor, GPU object picking, Jolt physics, and configurable post-processing.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
@@ -23,7 +23,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -38,9 +38,9 @@
 </header>
 <main id="main" class="case-study keen-case engine-case">
 <a class="back-link" href="projects.html">← Back to projects</a>
-<h1>Vulkan Game Engine</h1>
-<div class="case-summary"><div class="eyebrow">Personal engine project · C++ / Vulkan</div>
-<p>A custom rendering and engine playground, with physically based materials, interactive scene editing, GPU object picking, and integrated rigid-body physics.</p></div>
+<h1>C++ / Vulkan Engine</h1>
+<div class="case-summary"><div class="eyebrow">Software architecture & tools · C++ / Vulkan</div>
+<p>A C++ engine integrating rendering, component-based scene architecture, live editing tools, and rigid-body physics, with explicit GPU resource management.</p></div>
 <div class="engine-facts" aria-label="Project details"><div><span>Focus</span><strong>Rendering & engine tools</strong></div><div><span>Core stack</span><strong>C++ · Vulkan · GLSL</strong></div><div><span>Integrations</span><strong>Dear ImGui · Jolt · GLFW</strong></div><div><span>Status</span><strong>In development</strong></div></div>
 <figure class="engine-figure">
 <img src="img/vulkan-engine/overview.png" width="1792" height="1242" alt="PBR-rendered vases on a gold surface under colored point lights and a nebula skybox" fetchpriority="high">
@@ -54,7 +54,7 @@
 <li><a href="#physics">Jolt physics & collider visualization</a></li>
 <li><a href="#post-processing">A configurable post-processing pipeline</a></li>
 <li><a href="#architecture">Components, resources & GPU experiments</a></li>
-</ul></nav><div class="case-content"><section class="job" aria-labelledby="rendering"><h2 id="rendering" tabindex="-1"><a class="section-anchor" href="#rendering">PBR rendering <span aria-hidden="true">#</span></a></h2><p>I’m building a personal game engine in C++ with Vulkan, bringing rendering, scene components, physics, and editing tools into one application. It’s a place to work directly with GPU resources and turn graphics experiments into reusable engine systems.</p><p>The renderer uses a metallic–roughness PBR workflow with <strong>albedo, normal, ambient occlusion, metallic, and roughness maps</strong>. The GLSL shader combines a GGX specular distribution, Schlick Fresnel, and distance-attenuated point lights. Tangent-space normal mapping adds surface detail, while a selectable skybox gives the scene its backdrop.</p><figure class="engine-figure">
+</ul></nav><div class="case-content"><section class="job" aria-labelledby="rendering"><h2 id="rendering" tabindex="-1"><a class="section-anchor" href="#rendering">PBR rendering <span aria-hidden="true">#</span></a></h2><p>I’m building a C++ engine with Vulkan to explore component-based architecture, GPU resource management, and tool integration. The application connects a renderer, a live scene editor, and a physics system through reusable components.</p><p>The renderer uses a metallic–roughness PBR workflow with <strong>albedo, normal, ambient occlusion, metallic, and roughness maps</strong>. The GLSL shader combines a GGX specular distribution, Schlick Fresnel, and distance-attenuated point lights. Tangent-space normal mapping adds surface detail, while a selectable skybox gives the scene its backdrop.</p><figure class="engine-figure">
 <img src="img/vulkan-engine/materials.png" width="1506" height="856" alt="Material resource manager showing five PBR texture slots beside textured vases" loading="lazy">
 <figcaption>The material resource manager previews albedo, normal, ambient occlusion, metallic, and roughness maps.</figcaption></figure></section>
 <section class="job" aria-labelledby="editor"><h2 id="editor" tabindex="-1"><a class="section-anchor" href="#editor">An editor connected to the running scene <span aria-hidden="true">#</span></a></h2><p>The Dear ImGui interface combines a resource manager, searchable game-object list, and object inspector. Select an object to edit its position, rotation, scale, and exposed component parameters directly in the running scene. Material texture previews, skybox selection, and frame-time graphs keep the tools close to the work.</p><p><strong>GPU object picking</strong> connects a click in the viewport to the inspector. The scene pass writes an integer object ID alongside its color output; a one-pixel readback identifies the selected object. Readback follows the existing frame fences, and selection revisions prevent an older result from replacing a more recent selection.</p><p>A post-process outline makes the selected object easy to follow, with adjustable color and thickness.</p><figure class="engine-figure">
@@ -73,8 +73,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

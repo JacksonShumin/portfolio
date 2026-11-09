@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cave Crawler | Jackson Shuminski</title>
-<meta name="description" content="A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.">
+<meta name="description" content="Implemented deterministic procedural generation and on-demand terrain chunks in Unity, plus deployable objects that modify the environment.">
 <meta name="theme-color" content="#182b2b">
 <meta property="og:title" content="Cave Crawler | Jackson Shuminski">
-<meta property="og:description" content="A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.">
+<meta property="og:description" content="Implemented deterministic procedural generation and on-demand terrain chunks in Unity, plus deployable objects that modify the environment.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-js.png">
@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -40,34 +40,25 @@
 <h1>Cave Crawler</h1>
 <div class="case-summary">
 <div class="eyebrow">Unity · Team project</div>
-<p>A mining exploration game. I built seeded, chunk-based world generation and deployable torch and bomb items.</p>
+<p>Implemented deterministic procedural generation and on-demand terrain chunks in Unity, plus deployable objects that modify the environment.</p>
 </div>
 <ul>
 <li class="job">
 <h2>Overview</h2>
-<p>In this economy based mining game you expand outwards and gather resources to upgrade yourself at the shop.
-                    You must dig further into the earth to find more resources to collect and drag back to base. The intense
-                    feeling of satisfaction when you upgrade yourself creates an addictive urge to keep playing. </p>
+<p>Cave Crawler is a team-built mining game in Unity. My engineering work focused on deterministic terrain generation, generating chunks as the player moves, and deployable items that interact with the terrain.</p>
 <div class="job" id="images2">
 <img src="img/caveCrawler.PNG"  alt="Cave Crawler mining gameplay" id="projectImage" loading="lazy">
 </div>
 </li>
 <li class="job">
-<h2>What I did</h2>
-<p>I made the deployable items for the game. These items cost resources and the player starts with a limited
-                    amount of them. I made a torch item that lights up an area around it so the player can more easily navigate
-                    the pitch blackness around them. I also made a bomb item that explodes, destroying all the minable blocks
-                    around it instantly.
-                </p>
+<h2>Engineering contributions</h2>
+<p>I implemented deployable torches and bombs with resource costs and limited starting quantities. Torches illuminate nearby terrain; bombs destroy mineable blocks within their area of effect.</p>
 <div class="job" id="images2">
 <img src="img/caveCrawlerItems.PNG" alt="The player next to a deployed bomb and torch" loading="lazy">
 <img src="img/caveCrawlerMapGeneration.PNG" alt="The map being generated around where the player explores" loading="lazy">
 </div>
 <br>
-<p>I created the level generation for this game. The map generation is seeded random, so reusing the same starting
-                    seed will generate the same map. The map is broken down into chunks that generate around the player. Whenever
-                    the player enters a new chunk, the surrounding chunks are generated around them. This allows the player to explore
-                    endlessly without a superfluous amount of new wall tiles being created. </p>
+<p>I implemented seeded procedural terrain generation so the same seed reproduces the same map. Terrain is divided into chunks, with neighboring chunks generated when the player enters a new area. This supports continued exploration while avoiding generating the entire map upfront.</p>
 </li>
 </ul>
 <div class="actions">
@@ -78,8 +69,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

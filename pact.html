@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Pact | Jackson Shuminski</title>
-<meta name="description" content="A third-person roguelike shooter. I developed player controls, projectiles, and a shared ability system for players and enemies.">
+<meta name="description" content="Designed reusable ability and projectile systems for a team-built Unreal Engine project, separating shared behavior from visual effects.">
 <meta name="theme-color" content="#182b2b">
 <meta property="og:title" content="The Pact | Jackson Shuminski">
-<meta property="og:description" content="A third-person roguelike shooter. I developed player controls, projectiles, and a shared ability system for players and enemies.">
+<meta property="og:description" content="Designed reusable ability and projectile systems for a team-built Unreal Engine project, separating shared behavior from visual effects.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-js.png">
@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -40,7 +40,7 @@
 <h1>The Pact</h1>
 <div class="case-summary">
 <div class="eyebrow">Unreal Engine 5 · Team project</div>
-<p>A third-person roguelike shooter. I developed player controls, projectiles, and a shared ability system for players and enemies.</p>
+<p>Designed reusable ability and projectile systems for a team-built Unreal Engine project, separating shared behavior from visual effects.</p>
 </div>
 <ul>
 <div class="WhatIDid">
@@ -48,20 +48,19 @@
 </div>
 <li class="job">
 <h2>Overview</h2>
-<p>I have worked on this game as a gameplay programmer since August 2022. My team included Aditya Patil, Joel Shaji, Kesavan Shanmugasundaram, and David Liu. We made a third-person, roguelike shooter with a focus on ability-based combat.  </p>
+<p>The Pact is a team-built third-person roguelike shooter developed with Aditya Patil, Joel Shaji, Kesavan Shanmugasundaram, and David Liu. I joined as a gameplay programmer in August 2022, focusing on the foundational systems for controls, projectiles, and abilities.</p>
 </li>
 <img src="img/thePact.PNG" alt="The Pact project screenshot" loading="lazy">
 <li class="job">
-<h2>Gameplay Programmer</h2>
-<p>I worked on much of the foundational mechanics of our game. I created or implemented the player controller, the projectiles, every ability, all player animations, the lodestone combat, and many other small tasks. My technical implementations were carefully premeditated so that both the player and the enemies could use every single ability without any extra logic. </p>
+<h2>Shared systems & architecture</h2>
+<p>I implemented the player controller, projectiles, abilities, player animations, and lodestone combat. I designed the ability logic for reuse by both players and enemies, so new behavior could be shared without separate implementations for each character type.</p>
 </li>
 <li class="job">
 <h2>Abilities</h2>
 <p>There are six abilities total: three for light attack and three for heavy attack. Each can be combined to create powerful synergies and a unique combat style. Both the player and enemies have a unique visual style of VFX for every single combination of abilities. This sums to a total of 32 potential unique VFX styles for projectiles.
                 </p>
 <br>
-<p>I implemented these projectiles with special abilities using an inheritance system. At the top of the system is the “Logic Layer,” which has 3 Blueprints that contain all the logic for every upgrade. Bellow the logic layer is the “Visual Layer,” which, by contrast, has no logic whatsoever. Instead, it overrides the VFX manager to provide easily customizable projectile styles.
-                </p>
+<p>I organized projectile behavior into an inheritance hierarchy with separate logic and visual layers. Three Blueprints define upgrade behavior in the logic layer. The visual layer overrides the VFX manager to customize appearance without duplicating behavior.</p>
 </li>
 <li class="job">
 <h2>Projectiles</h2>
@@ -94,8 +93,7 @@
 <p>The frost debuff simply adds a frost stack to the character hit. This affects the character's movement speed and fire rate, which is implemented in the shared character blueprint, not the projectile.
                 </p>
 <br>
-<p>The Airstrike ability is a charging attack that will spawn an airstrike blueprint. This triggers some cool VFX and fires identical heavy shots from the sky in a radius. These shots have all the upgrades of the heavy attack except for the ability to make more airstrikes. This makes it very powerful when mixed with the other abilities.
-                </p>
+<p>The Airstrike ability spawns a separate Blueprint that triggers visual effects and fires heavy projectiles within a radius. Those projectiles inherit the current heavy-attack upgrades, with airstrike spawning excluded to prevent recursive creation.</p>
 </li>
 </ul>
 </main>
@@ -103,8 +101,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

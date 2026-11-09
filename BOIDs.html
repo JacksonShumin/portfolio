@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GPU BOIDs | Jackson Shuminski</title>
-<meta name="description" content="Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.">
+<meta name="description" content="A GPU-parallel agent simulation exploring flocking algorithms, computational cost, and mesh complexity in Unity compute shaders.">
 <meta name="theme-color" content="#182b2b">
 <meta property="og:title" content="GPU BOIDs | Jackson Shuminski">
-<meta property="og:description" content="Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.">
+<meta property="og:description" content="A GPU-parallel agent simulation exploring flocking algorithms, computational cost, and mesh complexity in Unity compute shaders.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-js.png">
@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -40,15 +40,12 @@
 <h1>GPU BOIDs</h1>
 <div class="case-summary">
 <div class="eyebrow">Unity · Solo project</div>
-<p>Thousands of agents, three simple rules. Exploring parallel computation and emergent behavior on the GPU.</p>
+<p>A GPU-parallel agent simulation exploring flocking algorithms, computational cost, and mesh complexity in Unity compute shaders.</p>
 </div>
 <ul>
 <li class="job">
-<h2>Tens of Thousands of BOIDs</h2>
-<p>In order to get more familiar with Compute Shaders in Unity, I made a BOID simulation using the many threads of a Compute Shader in Unity.
-                    BOIDs are agents with flocking behavior and can appear like a swarm of fish or birds. Using the GPU, I could simulate
-                    about 32 thousand BOIDs in Unity in this experiment.
-                </p>
+<h2>Parallel agent simulation</h2>
+<p>I implemented a flocking simulation in Unity compute shaders to explore parallel agent updates on the GPU. The initial experiment simulated approximately 32,000 agents following local flocking rules.</p>
 </li>
 <iframe loading="lazy" height="315" src="https://www.youtube.com/embed/t2SDiu2ijGA?si=9DJNluYOhush4g86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
@@ -64,20 +61,11 @@
 <img src="img/largeboid.png"  alt="boids screenshot" loading="lazy">
 </div>
 <li class="job">
-<h2>BOID Castes</h2>
-<p>
-                    I made a special BOID that was marked so that it would behave differently and the others would treat it differently. My idea was a
-                    “Smelly BOID” that the others would avoid much more strongly, but it would feel lonely and muscle to the swarm's center. To make it
-                    more distinguished, I made it huge and green with the old high-poly mesh. Thanks to some optimizations I made, I was also able to have
-                    twice as many BOIDs.
-                </p>
+<h2>Configurable agent behavior</h2>
+<p>I added a distinct agent type with different attraction and avoidance weights to explore heterogeneous behavior within the same simulation. Other agents strongly avoid it while it moves toward the flock center. It uses a larger, higher-detail mesh to make its behavior visible.</p>
 <br>
 <h2>Optimization</h2>
-<p>
-                    In my second simulation, I made some changes so they would run a little quicker, short-circuiting and avoiding costly square roots
-                    whenever possible. The mesh was reduced to a triangular pyramid, substantially reducing the number of triangles. I also got
-                    rid of the teleporting to the other side because that was upsetting the swarm in a weird and seemingly unnatural way.
-                </p>
+<p>I reduced computation through short-circuit evaluation and avoiding square roots where possible. Replacing the standard agent mesh with a triangular pyramid also reduced geometry cost. I removed boundary teleportation after observing that it disrupted flock behavior. Together, these changes allowed the second experiment to simulate roughly twice as many agents.</p>
 </li>
 </ul>
 </main>
@@ -85,8 +73,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>

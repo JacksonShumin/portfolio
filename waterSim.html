@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DX11 Water Simulation | Jackson Shuminski</title>
-<meta name="description" content="From layered waves to buoyant objects: a custom water simulation and rendering pipeline built from the ground up.">
+<meta name="description" content="A custom DirectX 11 simulation pipeline connecting GPU wave generation, CPU buoyancy calculations, and multi-pass rendering.">
 <meta name="theme-color" content="#182b2b">
 <meta property="og:title" content="DX11 Water Simulation | Jackson Shuminski">
-<meta property="og:description" content="From layered waves to buoyant objects: a custom water simulation and rendering pipeline built from the ground up.">
+<meta property="og:description" content="A custom DirectX 11 simulation pipeline connecting GPU wave generation, CPU buoyancy calculations, and multi-pass rendering.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-js.png">
@@ -22,7 +22,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Jackson Shuminski home">
 <span class="brand-mark">JS.</span>
-<span>Jackson Shuminski<small>Graphics & game developer</small>
+<span>Jackson Shuminski<small>Software engineer</small>
 </span>
 </a>
 <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
@@ -40,14 +40,12 @@
 <h1>DX11 Water Simulation</h1>
 <div class="case-summary">
 <div class="eyebrow">DirectX 11 · Solo project</div>
-<p>From layered waves to buoyant objects: a custom water simulation and rendering pipeline built from the ground up.</p>
+<p>A custom DirectX 11 simulation pipeline connecting GPU wave generation, CPU buoyancy calculations, and multi-pass rendering.</p>
 </div>
 <ul>
 <li class="job">
 <h2>Overview</h2>
-<p>This is a solo passion project I have been working on in DirectX11 since February of 2022. My goal was to simulate and render accurate water in
-                    an islandy setting. This was my first project using compute shaders and my first time taking on water simulation, so I naturally ran into many
-                    difficulties that I solved on my own. These bugs were often visually absurd-looking, and I had a lot of fun trying to figure them out. </p>
+<p>I began this independent DirectX 11 project in February 2022 to build a water simulation and rendering pipeline. It connects GPU-generated wave data to surface shading, underwater effects, and CPU-side buoyancy calculations.</p>
 <br>
 <img src="img/waterSim.PNG"  alt="Water Simulation screenshot" id="projectImage" loading="lazy">
 </li>
@@ -150,9 +148,7 @@
 <img src="img/bouyantDucks.PNG"  alt="Water Simulation screenshot" loading="lazy">
 <li class="job">
 <h2>Wave Harmonizing</h2>
-<p>Now this bug was pretty funny but also really bad for realism. The water would sort of flatten out for a second and then spike up to extreme heights
-                     in random places in a weird cyclical way that wouldn't spike up the same place twice. What was going on here? The waves were harmonizing!
-                </p>
+<p>During testing, I observed periodic flattening followed by extreme wave peaks. Investigating the wave combinations revealed harmonization between waves traveling in the same direction.</p>
 <br>
 <p>When two or more waves are going in the same exact direction, they can harmonize in certain spots. This means that their amplitudes add together in
                 places where they collide. In this picture, I was experimenting with axis-aligned waves before I figured out how to make directional waves that are
@@ -194,8 +190,8 @@
 <div class="wrap contact-inner">
 <div>
 <div class="eyebrow">Next steps</div>
-<h2 id="contact-title">Let’s talk graphics & games.</h2>
-<p>Have a project or opportunity in mind? Get in touch.</p>
+<h2 id="contact-title">Let’s talk software.</h2>
+<p>Have a software engineering role or a technical challenge in mind? Get in touch.</p>
 </div>
 <div class="contact-links"><a class="button" href="mailto:jvshumin@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/jackson-shuminski-9509a1170/">Connect on LinkedIn ↗</a></div>
 </div>
